@@ -5,4 +5,5 @@ class Owner < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   belongs_to :building
+  has_many :messages
 end
