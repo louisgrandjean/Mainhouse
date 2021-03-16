@@ -2,8 +2,9 @@ Rails.application.routes.draw do
   devise_for :owners
   devise_for :agencies
 
-  resources :agencies#, :path => "agence"
+  resources :agencies do #, :path => "agence"
   resources :buildings#, :path => "immeuble"
+  end
   resources :owners#, :path => "proprietaire"
   resources :events#, :path => "evenement"
   resources :messages#, :path => "discussions"
