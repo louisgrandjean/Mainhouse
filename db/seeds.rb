@@ -6,50 +6,38 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
-
-Agency.create(email: "1test@test.com", password: "testtest", name: "agence1")
-Agency.create(email: "2test@test.com", password: "testtest", name: "agence2")
-Agency.create(email: "3test@test.com", password: "testtest", name: "agence3")
-
-
-Building.create(name: "Building1", agency_id: 1)
-Building.create(name: "Building2", agency_id: 3)
-Building.create(name: "Building3", agency_id: 1)
-Building.create(name: "Building4", agency_id: 2)
-Building.create(name: "Building5", agency_id: 3)
-Building.create(name: "Building6", agency_id: 1)
-
-
-Owner.create(building_id: 2, first_name: "Michel", email: "test@gmail.com", password: "testtest")
-Owner.create(building_id: 2, first_name: "Rodrigo", email: "test1@gmail.com", password: "testtest")
-Owner.create(building_id: 2, first_name: "Marguerite", email: "test2@gmail.com", password: "testtest")
-Owner.create(building_id: 3, first_name: "Josiane", email: "test3@gmail.com", password: "testtest")
-Owner.create(building_id: 3, first_name: "Martin", email: "test4@gmail.com", password: "testtest")
-Owner.create(building_id: 5, first_name: "Lola", email: "test5@gmail.com", password: "testtest")
-Owner.create(building_id: 4, first_name: "Youpi", email: "testu@gmail.com", password: "testtest")
-Owner.create(building_id: 4, first_name: "Rodriga", email: "testz@gmail.com", password: "testtest")
-Owner.create(building_id: 2, first_name: "MargueritO2", email: "teste@gmail.com", password: "testtest")
-Owner.create(building_id: 1, first_name: "Louis", email: "testr@gmail.com", password: "testtest")
-Owner.create(building_id: 6, first_name: "Max", email: "testa@gmail.com", password: "testtest")
-Owner.create(building_id: 5, first_name: "Lil Wayne", email: "testf@gmail.com", password: "testtest")
+5.times do |i|
+Agency.create(email: "test#{i + 1}@test.com", password: "testtest", name: "agence#{i + 1}", city: "Lyon", adress: "0#{i + 1} rue de la Location", phone_number: "06.42.24.42.2#{i + 1}", siren: Faker::Number.number(digits: 9))
+end
 
 
 
+3.times do |i|
+  Building.create(name: "Building#{i + 1}", agency_id: 1, adress: "0#{i + 1} rue de la République", reference: "charman cottage avec #{i + 1} salle de bain et #{i + 25} fenêtres", picture: "https://www.architecture-art-deco.fr/FR/69000/Lyon/medium/Immeuble%20Art%20Deco%20Rue%20Tete%20d-or%20No5%2001.jpg")
+  Building.create(name: "Building#{i + 4}", agency_id: 2, adress: "0#{i + 4} rue de la République", reference: "charman cottage avec #{i + 4} salle de bain et #{i + 5} fenêtres", picture: "https://www.illico-travaux.com/wp-content/uploads/2018/02/Immeuble2.jpg")
+  Building.create(name: "Building#{i + 7}", agency_id: 3, adress: "0#{i + 7} rue de la République", reference: "charman cottage avec #{i + 5} salle de bain et #{i + 2} fenêtres", picture: "https://www.lyonmag.com/media/images/part-dieu-ok2.jpg")
+end
 
-Message.create(owner_id: 4, building_id: 3, content: "bonjour les voisins")
-Message.create(owner_id: 2, building_id: 2, content: "bonjour les voisins")
-Message.create(owner_id: 2, building_id: 2, content: "bonjour les voisins")
-Message.create(owner_id: 10, building_id: 1, content: "bonjour les voisins")
-Message.create(owner_id: 10, building_id: 1, content: "bonjour les voisins")
-Message.create(owner_id: 10, building_id: 1, content: "bonjour les voisins")
-Message.create(owner_id: 1, building_id: 2, content: "bonjour les voisins")
-Message.create(owner_id: 1, building_id: 2, content: "bonjour les voisins")
-Message.create(owner_id: 1, building_id: 2, content: "bonjour les voisins")
+3.times do |i|
+  Owner.create(building_id: 1, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, phone_number: "07.42.24.42.2#{i + 1}", email: "owner_test#{i + 1}@gmail.com", password: "testtest", lot: "#{i + 1}")
+  Owner.create(building_id: 3, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, phone_number: "07.42.24.42.2#{i + 2}", email: "owner_test#{i + 2}@gmail.com", password: "testtest", lot: "#{i + 2}")
+  Owner.create(building_id: 6, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, phone_number: "07.42.24.42.2#{i + 3}", email: "owner_test#{i + 3}@gmail.com", password: "testtest", lot: "#{i + 3}")
+  Owner.create(building_id: 9, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, phone_number: "07.42.24.42.2#{i + 4}", email: "owner_test#{i + 4}@gmail.com", password: "testtest", lot: "#{i + 4}")
+end
 
-Event.create(building_id: 1, title: "Assemblée générale")
-Event.create(building_id: 2, title: "Assemblée générale")
-Event.create(building_id: 3, title: "Assemblée générale")
-Event.create(building_id: 4, title: "Assemblée générale")
-Event.create(building_id: 5, title: "Assemblée générale")
-Event.create(building_id: 6, title: "Assemblée générale")
+
+
+Message.create(owner_id: 1, building_id: 1, content: "Bonjour les voisins")
+Message.create(owner_id: 2, building_id: 3, content: "Salut les naze")
+Message.create(owner_id: 3, building_id: 6, content: "Hello world")
+Message.create(owner_id: 4, building_id: 9, content: "À quand une AG ?")
+Message.create(owner_id: 5, building_id: 9, content: "On en a gros")
+Message.create(owner_id: 6, building_id: 9, content: "Il s'agirait de grandir")
+
+
+Event.create(building_id: 1, title: "Assemblée générale", description: "Réunion formelle", datetime: Faker::Date.in_date_period(month: 2), duration: 90)
+Event.create(building_id: 3, title: "Assemblée générale", description: "Réunion formelle", datetime: Faker::Date.in_date_period(month: 2), duration: 90)
+Event.create(building_id: 6, title: "Assemblée générale", description: "Réunion formelle", datetime: Faker::Date.in_date_period(month: 2), duration: 90)
+Event.create(building_id: 9, title: "Tournée générale", description: "Cuite formelle", datetime: Faker::Date.in_date_period(month: 2), duration: 90)
+Event.create(building_id: 9, title: "Ravalement de facade", description: "On va laver la facade", datetime: Faker::Date.in_date_period(month: 2), duration: 90)
+Event.create(building_id: 9, title: "Dératisation", description: "Hécatombe de rats", datetime: Faker::Date.in_date_period(month: 2), duration: 90)
