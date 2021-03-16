@@ -14,6 +14,7 @@
  *= require chartist-plugin-tooltip
  *= require pignose.calendar.min
  *= require style
+ *= require landing_page
  *
  *= require_tree .
  *= require_self
