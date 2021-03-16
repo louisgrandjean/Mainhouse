@@ -3,14 +3,12 @@
 
 
 <% @buildings.each do |building| %>
-    <% if building.agency.id == params[:agency_id].to_i%>
-    
+  <% if building.agency.id == params[:agency_id].to_i%>  
     <h2> Nom de l'immeuble : <%= building.name %> </h2>
     <h3> Id de l'immeuble : <%= building.id %> </h3>
     <h4> Référence immmeuble <%= building.reference %> </h4>
-    </br>
-  
-<% end %>
+    </br> 
+  <% end %>
 <% end %>
 
 
