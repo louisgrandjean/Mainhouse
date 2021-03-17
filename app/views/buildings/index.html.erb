@@ -1,17 +1,32 @@
-<h1>Page accueil agence</h1>
-</br>
 
 
-<% @buildings.each do |building| %>
-  <% if building.agency.id == params[:agency_id].to_i%>  
-    <h2> Nom de l'immeuble : <%= building.name %> </h2>
-    <h3> Id de l'immeuble : <%= building.id %> </h3>
-    <h4> Référence immmeuble <%= building.reference %> </h4>
-    </br> 
-  <% end %>
-<% end %>
-
-
+<div class="container margin-top">
+<div style="float: right">
+<%= link_to "Créer un immeuble",  new_agency_building_path, method: :get, class:"btn bt-theme  p-2 shadow rounded-pill"%>                                    
+</div>
+  <div class="row">
+  
+    <% @buildings.each do |building| %>
+      <% if building.agency.id == params[:agency_id].to_i%> 
+        <div class="col-md-4">
+          <div class="card text-center" style="width: 18rem;">
+            <img class="card-img-top" src=<%= building.picture%> alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><%= building.name%></h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><%= building.adress%></li>
+              <li class="list-group-item">Id de l'immeuble : <%= building.id %></li> 
+            </ul>
+              <div class="card-body">
+                <%= link_to "Afficher cet immeuble",  new_agency_building_path(params[:agency_id], building.id), method: :get, class:"btn bt-theme  p-2 shadow rounded-pill"%>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+</div>
 
 
 
