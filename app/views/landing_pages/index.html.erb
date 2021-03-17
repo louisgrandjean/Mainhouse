@@ -1,3 +1,19 @@
+
+<%= link_to "créer un compte agence", new_agency_registration_path, method: :get, class:"btn bt-theme  p-2 shadow rounded-pill"%>
+<%= link_to "login agence",  agency_registration_path, method: :patch, class:"btn bt-theme  p-2 shadow rounded-pill"%>
+
+<%= link_to "créer un compte propriétaire", new_owner_registration_path, method: :get, class:"btn bt-theme  p-2 shadow rounded-pill"%>
+<%= link_to "login propriétaire",  owner_registration_path, method: :patch, class:"btn bt-theme  p-2 shadow rounded-pill"%>
+
+<%if current_owner%>
+<%= link_to "Se déconnecter propriétaire",  destroy_owner_session_path, method: :delete, class:"btn bt-theme  p-2 shadow rounded-pill"%>
+<%end%>
+
+<%if current_agency%>
+<%= link_to "Mes immeubles",  agency_buildings_path(current_agency.id), method: :get, class:"btn bt-theme  p-2 shadow rounded-pill"%>
+<%= link_to "Se déconnecter agence",  destroy_agency_session_path, method: :delete, class:"btn bt-theme  p-2 shadow rounded-pill"%>
+<%end%>
+
 <section>
   <div class="container py-5">
     <div class="row text-center align-items-end">
