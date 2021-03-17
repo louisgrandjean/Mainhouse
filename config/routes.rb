@@ -3,9 +3,11 @@ Rails.application.routes.draw do
   devise_for :agencies
 
   resources :agencies do #, :path => "agence"
-  resources :buildings#, :path => "immeuble"
+    resources :buildings do #, :path => "immeuble"
+      resources :owners#, :path => "proprietaire"
+    end
   end
-  resources :owners#, :path => "proprietaire"
+
   resources :events#, :path => "evenement"
   resources :messages#, :path => "discussions"
   root :to => "landing_pages#index"
