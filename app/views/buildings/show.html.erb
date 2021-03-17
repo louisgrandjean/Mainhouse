@@ -1,10 +1,18 @@
-<h1>Page show immeuble vue agence</h1>
+<body>
+<div class="card" style="width: 40rem; filter: drop-shadow(0 0 0.15rem grey); margin-right:auto; margin-left:auto;">
+  <img class="card-img-top" src="<%= @building.picture %>" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title"><%= @building.name %></h5>
+    <p class="card-text">Id: <%= @building.id %></p>
+    <p class="card-text">Adress: <%=@building.adress%></p>
+    <p class="card-text">Reference: <%= @building.reference %></p>
+    <p class="card-text">Created at: <%= @building.created_at %></p>
+   
+    <button type="button" class="btn mb-1 bt-theme mt-3 mr-1">Edit</button>
+    <button type="button" class="btn mb-1 btn-danger mt-3">Delete</button>
+   
+  </div>
+</div>
+</body>
 
-<h2>Nom de l'immeuble : <%= @building.name %></h2>
-<h3>Id de l'immeuble : <%= @building.id %></h3>
-<h3>Adress : <%= @building.adress %></h3>
-<h3>Reference : <%= @building.reference %></h3>
-<h3>Crée le : <%= @building.created_at %></h3>
 
-<img src="<%= @building.picture %>">
-  

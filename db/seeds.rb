@@ -5,6 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Agency.destroy_all
+Building.destroy_all
+Message.destroy_all
+Owner.destroy_all
+Event.destroy_all
 
 5.times do |i|
 Agency.create(email: "test#{i + 1}@test.com", password: "testtest", name: "agence#{i + 1}", city: "Lyon", adress: "0#{i + 1} rue de la Location", phone_number: "06.42.24.42.2#{i + 1}", siren: Faker::Number.number(digits: 9))
@@ -13,9 +18,9 @@ end
 
 
 3.times do |i|
-  Building.create(name: "Building#{i + 1}", agency_id: 1, adress: "0#{i + 1} rue de la République", reference: "charman cottage avec #{i + 1} salle de bain et #{i + 25} fenêtres", picture: "https://www.architecture-art-deco.fr/FR/69000/Lyon/medium/Immeuble%20Art%20Deco%20Rue%20Tete%20d-or%20No5%2001.jpg")
-  Building.create(name: "Building#{i + 4}", agency_id: 2, adress: "0#{i + 4} rue de la République", reference: "charman cottage avec #{i + 4} salle de bain et #{i + 5} fenêtres", picture: "https://www.illico-travaux.com/wp-content/uploads/2018/02/Immeuble2.jpg")
-  Building.create(name: "Building#{i + 7}", agency_id: 3, adress: "0#{i + 7} rue de la République", reference: "charman cottage avec #{i + 5} salle de bain et #{i + 2} fenêtres", picture: "https://www.lyonmag.com/media/images/part-dieu-ok2.jpg")
+  Building.create(name: "Building#{i + 1}", agency_id: 1, adress: "0#{i + 1} rue de la République", reference: Faker::Number.hexadecimal(digits: 6), picture: "https://www.architecture-art-deco.fr/FR/69000/Lyon/medium/Immeuble%20Art%20Deco%20Rue%20Tete%20d-or%20No5%2001.jpg")
+  Building.create(name: "Building#{i + 4}", agency_id: 2, adress: "0#{i + 4} rue de la République", reference: Faker::Number.hexadecimal(digits: 6), picture: "https://www.illico-travaux.com/wp-content/uploads/2018/02/Immeuble2.jpg")
+  Building.create(name: "Building#{i + 7}", agency_id: 3, adress: "0#{i + 7} rue de la République", reference: Faker::Number.hexadecimal(digits: 6), picture: "https://www.lyonmag.com/media/images/part-dieu-ok2.jpg")
 end
 
 3.times do |i|
