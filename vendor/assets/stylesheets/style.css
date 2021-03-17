@@ -14702,7 +14702,6 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
 /*# sourceMappingURL=style.css.map */
 
 #left {
-  position: fixed;
   bottom: 0;
   left: 0;
   z-index: 1000;
@@ -14721,7 +14720,6 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
   left: 250px;
   width: 250px;
   background: #CCC;
-  position: fixed;
   height: 100%;
   overflow-y: auto;
   z-index: 1000;
