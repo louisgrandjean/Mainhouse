@@ -10,7 +10,7 @@
    
 
     <%=link_to "Editer", edit_agency_building_path, class: "btn mb-1 bt-theme mt-3 mr-1"%>
-    <%= link_to "Supprimer", agency_building_path, :confirm => "Etes vous sur de supprimer cet immeuble ?", :method => :delete, class:"btn mb-1 btn-danger mt-3" %> 
+    <%= link_to "Supprimer", agency_building_path(params[:agency_id], params[:id]), :confirm => "Etes vous sur de supprimer cet immeuble ?", :method => :delete, class:"btn mb-1 btn-danger mt-3" %> 
 
    
   </div>
