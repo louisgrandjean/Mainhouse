@@ -1,4 +1,5 @@
 class BuildingsController < ApplicationController
+    before_action :authenticate_agency!
 
     def index 
         @buildings = Building.all
@@ -44,7 +45,7 @@ class BuildingsController < ApplicationController
 
     def destroy 
       @building = Building.find_by(agency_id: params[:agency_id], id: params[:id])
-      @building.destroy
+      @building.delete
       redirect_to agency_buildings_path(params[:agency_id])
     end
 
