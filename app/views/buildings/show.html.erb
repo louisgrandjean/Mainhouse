@@ -8,8 +8,10 @@
     <p class="card-text">Reference: <%= @building.reference %></p>
     <p class="card-text">Created at: <%= @building.created_at %></p>
    
+
     <%=link_to "Editer", edit_agency_building_path, class: "btn mb-1 bt-theme mt-3 mr-1"%>
-    <button type="button" class="btn mb-1 btn-danger mt-3">Delete</button>
+    <%= link_to "Supprimer", agency_building_path, :confirm => "Etes vous sur de supprimer cet immeuble ?", :method => :delete, class:"btn mb-1 btn-danger mt-3" %> 
+
    
   </div>
 </div>
