@@ -1,0 +1,23 @@
+<body>
+<div class="card" style="width: 40rem; filter: drop-shadow(0 0 0.15rem grey); margin-right:auto; margin-left:auto;">
+  
+  <div class="card-body">
+    <h5 class="card-title text-center"><%= @agency.name %></h5>
+    <p class="card-text">Id : <%= @agency.id %></p>
+    <p class="card-text">Ville : <%= @agency.city %></p>
+    <p class="card-text">Adresse : <%=@agency.adress%></p>
+    <p class="card-text">Numéro de téléphone : <%= @agency.phone_number %></p>
+    <p class="card-text">SIREN : <%= @agency.siren %></p>
+    <p class="card-text">Créée le : <%= @agency.created_at %></p>
+   
+
+    <%=link_to "Editer", edit_agency_path, class: "btn mb-1 bt-theme mt-3 mr-1"%>
+    <%= link_to "Supprimer", agency_path, :confirm => "Etes vous sur de supprimer cet immeuble ?", method: :delete, class:"btn mb-1 btn-danger mt-3" %> 
+
+   
+  </div>
+</div>
+</body>
+
+
+
