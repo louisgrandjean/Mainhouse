@@ -12,6 +12,9 @@
   <%= label_tag 'Reference' %>
   <%= text_field_tag 'reference', @building.reference, class: "form-control mb-2" %>
 
+  <% label_tag 'Picture' %>
+  <% text_field_tag 'picture', @building.picture, class: "form-control mb-2" %>
+
   <%= submit_tag "Créer un immeuble", class: "form-control btn btn-primary" %>
 
   <% end %>
