@@ -45,6 +45,11 @@ class BuildingsController < ApplicationController
 
     def destroy 
       @building = Building.find_by(agency_id: params[:agency_id], id: params[:id])
+      @owner = Owner.find_by(building: @building.id)
+      while @owner != nil
+        @owner.delete
+        @owner = Owner.find_by(building: @building.id)
+      end
       @building.delete
       redirect_to agency_buildings_path(params[:agency_id])
     end
