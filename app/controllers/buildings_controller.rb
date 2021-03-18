@@ -27,6 +27,21 @@ class BuildingsController < ApplicationController
       end
     end
 
+
+    def edit
+      @building = Building.find_by(agency_id: params[:agency_id], id: params[:id])
+    end
+
+    def update
+      @building = Building.find_by(agency_id: params[:agency_id], id: params[:id])
+      if @building.update(building_params)
+      redirect_to agency_building_path
+      else
+      render :edit
+      end
+    end
+
+
     def destroy 
       @building = Building.find_by(agency_id: params[:agency_id], id: params[:id])
       @building.destroy
