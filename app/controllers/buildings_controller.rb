@@ -45,7 +45,7 @@ class BuildingsController < ApplicationController
     def destroy 
       @building = Building.find_by(agency_id: params[:agency_id], id: params[:id])
       @building.destroy
-      redirect_to agency_buildings_path
+      redirect_to agency_buildings_path(params[:agency_id])
     end
 
     private
