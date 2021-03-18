@@ -26,6 +26,12 @@ class BuildingsController < ApplicationController
       end
     end
 
+    def destroy 
+      @building = Building.find_by(agency_id: params[:agency_id], id: params[:id])
+      @building.destroy
+      redirect_to agency_buildings_path
+    end
+
     private
     def building_params
       params.permit(:agency_id, :name, :adress, :reference)
