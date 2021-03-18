@@ -20,7 +20,7 @@ end
 
 def destroy
   @agency = Agency.find_by(id: params[:id])
-  @agency.destroy
+  @agency.delete
   redirect_to root_path
 end
 
