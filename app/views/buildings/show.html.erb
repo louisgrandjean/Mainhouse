@@ -1,0 +1,20 @@
+
+<div class="card " style="width: 40rem; filter: drop-shadow(0 0 0.15rem grey); margin-right:auto; margin-left: auto;">
+  <img class="card-img-top" src="<%= @building.picture %>" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title"><%= @building.name %></h5>
+    <p class="card-text">Id: <%= @building.id %></p>
+    <p class="card-text">Adresse: <%=@building.adress%></p>
+    <p class="card-text">Référence: <%= @building.reference %></p>
+    <p class="card-text">Crée le: <%= @building.created_at %></p>
+   
+
+    <%=link_to "Editer", edit_agency_building_path, class: "btn mb-1 bt-theme mt-3 mr-1"%>
+    <%= link_to "Supprimer", agency_building_path(params[:agency_id], params[:id]), :confirm => "Etes vous sur de supprimer cet immeuble ?", method: :delete, class:"btn mb-1 btn-danger mt-3" %> 
+
+   
+  </div>
+</div>
+
+
+

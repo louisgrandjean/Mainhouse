@@ -1,0 +1,40 @@
+<body>
+  <div class="login-form-bg h-100">
+    <div class="container h-100">
+      <div class="row justify-content-center h-100">
+        <div class="col-xl-6">
+          <div class="form-input-content">
+            <div class="card login-form mb-0">
+              <div class="card-body pt-5">
+                <a class="text-center" href="index.html"> <h4>Création du batiment</h4></a>
+                  <div class="form-group container" style="width: 30rem;">
+                    <%= form_tag agency_buildings_path, method: "post" do %>
+                    <div class="form-group">
+                    <%= label_tag 'Titre' %>
+                    <% text_field_tag 'agency_id', params[:agency_id] %>
+                    <%= text_field_tag 'name', @building.name, class: "form-control mb-2" %>
+                    </div>
+                    <div class="form-group">
+                    <%= label_tag 'Adresse' %>
+                    <%= text_area_tag 'adress', @building.adress, class: "form-control mb-2" %>
+                    </div>
+                    <div class="form-group">
+                    <%= label_tag 'Référence' %>
+                    <%= text_field_tag 'reference', @building.reference, class: "form-control mb-2" %>
+                    </div>
+                    <div class="form-group">
+                    <% label_tag 'Picture' %>
+                    <% text_field_tag 'picture', @building.picture, class: "form-control mb-2" %>
+                    </div>
+                    <%= submit_tag "Terminer", class: "form-control btn bt-theme" %>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

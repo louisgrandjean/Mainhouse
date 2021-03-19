@@ -1,0 +1,2 @@
+class AddColumnAgency < ApplicationRecord
+end
