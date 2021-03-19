@@ -5,7 +5,15 @@
         <!--**********************************
             Nav header start
         ***********************************-->
-        
+        <div class="nav-header mb-4">
+            <div class="brand-logo">
+                    <b class="logo-abbr"><img src="images/logo.png" alt=""> </b>
+                    <span class="logo-compact"><img src="./images/logo-compact.png" alt=""></span>
+                    <span class="brand-title">
+                        <img src="images/logo-text.png" alt="">
+                    </span>
+            </div>
+        </div>
         <!--**********************************
             Nav header end
         ***********************************-->
@@ -14,15 +22,11 @@
         ***********************************-->
         <div class="nk-sidebar">           
             <div class="nk-nav-scroll">
+              <div class="bt-theme" style="height : 80px">
+                <b class="logo-abbr"><img src="images/logo.png" alt=""> </b>
+              </div>
                 <ul class="metismenu" id="menu">
                 <li class="nav-">
-            <div class="brand-logo">
-                    <b class="logo-abbr"><img src="images/logo.png" alt=""> </b>
-                    <span class="brand-title">
-                        <img src="https://www.pixelcrea.com/images_book/prestige-immobilier-logo.jpg" style="max-width:100%; max-height:100%;">
-                    </span>
-                
-            </div>
         </li>
         <li class="nav-label">Dashboard</li>
           <li>
@@ -64,18 +68,16 @@
 <% elsif owner_signed_in? %>
 <%-# code de la navbar Owner -%>
 
-        <!--**********************************
+<!--**********************************
             Nav header start
         ***********************************-->
-        <div class="nav-header">
+        <div class="nav-header mb-4">
             <div class="brand-logo">
-                <a href="index.html">
                     <b class="logo-abbr"><img src="images/logo.png" alt=""> </b>
                     <span class="logo-compact"><img src="./images/logo-compact.png" alt=""></span>
                     <span class="brand-title">
                         <img src="images/logo-text.png" alt="">
                     </span>
-                </a>
             </div>
         </div>
         <!--**********************************
@@ -86,8 +88,13 @@
         ***********************************-->
         <div class="nk-sidebar">           
             <div class="nk-nav-scroll">
+              <div class="bt-theme" style="height : 80px">
+                <b class="logo-abbr"><img src="images/logo.png" alt=""> </b>
+              </div>
                 <ul class="metismenu" id="menu">
-          <li class="nav-label">Dashboard</li>
+                <li class="nav-">
+        </li>
+        <li class="nav-label">Dashboard</li>
 
               <li>
                 <span> <%= link_to "Mon Immeuble", class: "nav-text"%> </span> </li>
