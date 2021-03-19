@@ -6,9 +6,9 @@ class BuildingsController < ApplicationController
     end 
 
     def show
-        @building = Building.find_by(agency_id: params[:agency_id], id: params[:id])
+        @building = Building.find_by(agency_id: current_agency, id: params[:id])
         if @building.nil?
-            redirect_to root_path
+            redirect_to agency_buildings_path
         end
 
     end
@@ -30,11 +30,14 @@ class BuildingsController < ApplicationController
 
 
     def edit
-      @building = Building.find_by(agency_id: params[:agency_id], id: params[:id])
+      @building = Building.find_by(agency_id: current_agency, id: params[:id])
+      if @building.nil?
+        redirect_to agency_buildings_path
+    end
     end
 
     def update
-      @building = Building.find_by(agency_id: params[:agency_id], id: params[:id])
+      @building = Building.find_by(agency_id: current_agency, id: params[:id])
       if @building.update(building_params)
       redirect_to agency_building_path
       else
@@ -44,7 +47,7 @@ class BuildingsController < ApplicationController
 
 
     def destroy 
-      @building = Building.find_by(agency_id: params[:agency_id], id: params[:id])
+      @building = Building.find_by(agency_id: current_agency, id: params[:id])
       @owner = Owner.find_by(building: @building.id)
       while @owner != nil
         @owner.delete
