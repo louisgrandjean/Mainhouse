@@ -10567,10 +10567,9 @@ sub {
 
 .nav-header {
     height: 5rem;
-    width: 15.1875rem;
+    width: 100%;
     display: inline-block;
     text-align: left;
-    position: absolute;
     left: 0;
     top: 0;
     background: #FF9F1C;
@@ -11354,7 +11353,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     width: 13.1875rem;
     padding-bottom: 0px;
     height: 100%;
-    position: absolute;
+    position: fixed;
     padding-top: 0;
     z-index: 99;
     background: #fff;
