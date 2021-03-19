@@ -19,9 +19,19 @@ def update
 end
 
 def destroy
-  @agency = Agency.find_by(id: current_agency)
+  @agency = Agency.find_by(id: params[:id])
+  Building.all.each do |build|
+    if build.agency.id == current_agency.id
+      @owner = Owner.find_by(building: build.id)
+      while @owner != nil
+        @owner.delete
+        @owner = Owner.find_by(building: build.id)
+      end
+    build.delete
+    end
+  end
   @agency.delete
-  redirect_to root_path 
+  redirect_to root_path
 end
 
 private
