@@ -10,25 +10,6 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require settings
-//= require gleek
-//= require common.min
-//= require custom.min
-//= require settings
-//= require styleSwitcher
-//= require Chart.bundle.min
-//= require circle-progress.min
-//= require index
-//= require topojson.min
-//= require datamaps.world.min
-//= require raphael.min
-//= require morris.min
-//= require moment.min
-//= require pignose.calendar.min
-//= require chartist.min
-//= require chartist-plugin-tooltip.min
-//= require dashboard-1
-//
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
