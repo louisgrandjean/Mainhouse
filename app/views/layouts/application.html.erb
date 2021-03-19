@@ -8,8 +8,17 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  
+  <header>
+    <div class="row">
+      <%= render 'layouts/navbar'%>
+    </div>
+  </header>
 
   <body>
-    <%= yield %>
+      <%= yield %>
   </body>
+
+  <footer>
+  </footer>
 </html>
