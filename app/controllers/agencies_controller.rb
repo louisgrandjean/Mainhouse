@@ -8,18 +8,18 @@ def create
 end
 
 def edit
-  @agency = Agency.find(params[:id])
+  @agency = Agency.find_by(id: current_agency)
 end
 
 
 def update
-  @agency = Agency.find(params[:id])
+  @agency = Agency.find_by(id: current_agency)
   @agency.update(agency_params)
   redirect_to agency_path(params[:id])
 end
 
 def destroy
-  @agency = Agency.find_by(id: params[:id])
+  @agency = Agency.find_by(id: current_agency)
   @agency.delete
   redirect_to root_path
 end
