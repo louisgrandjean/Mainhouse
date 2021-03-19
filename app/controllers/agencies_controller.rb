@@ -21,7 +21,7 @@ end
 def destroy
   @agency = Agency.find_by(id: current_agency)
   @agency.delete
-  redirect_to root_path
+  redirect_to root_path 
 end
 
 private
