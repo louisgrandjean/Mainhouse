@@ -8,7 +8,7 @@
   <div class="row">
   
     <% @buildings.each do |building| %>
-      <% if building.agency.id == params[:agency_id].to_i%> 
+      <% if building.agency.id == current_agency.id%> 
         <div class="col-md-4 margin-top">
           <div class="card text-center ml-5" style="width: 18rem;">
             <img class="card-img-top" src=<%= building.picture%> alt="Card image cap">

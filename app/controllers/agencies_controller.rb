@@ -1,7 +1,7 @@
 class AgenciesController < ApplicationController
 
 def show 
-  @agency = Agency.find(params[:id])
+  @agency = Agency.find_by(id: current_agency)
 end 
 
 def create
