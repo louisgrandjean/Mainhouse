@@ -34,7 +34,7 @@
           </li>
   
           <li>
-            <span> <%= link_to "Propriétaires", class: "nav-text"%> </span> </li>
+            <span> <%= link_to "Propriétaires", all_owners_path(current_agency.id), class: "nav-text"%> </span> </li>
           </li>
   
           <li>
@@ -122,7 +122,7 @@
       <div class="nk-nav-scroll  sidebar-footer">
         <ul class="metismenu" id="menu">
           <li>
-            <span> <%= link_to "Mon Profil", class: "nav-text"%> </span> </li>
+            <span> <%= link_to "Mon Profil", agency_building_owner_path(current_owner.building.agency_id, current_owner.building.id, current_owner.id), class: "nav-text"%> </span> </li>
           </li>   
 
           <li>
