@@ -33,6 +33,22 @@ class OwnersController < ApplicationController
       end
     end
 
+		def edit
+      @owner = Owner.find_by(building_id: params[:building_id], id: params[:id])
+      if @owner.nil?
+        redirect_to agency_building_owners_path(params[:agency_id], params[:building_id])
+    end
+    end
+
+    def update
+      @owner = Owner.find_by(building_id: params[:building_id], id: params[:id])
+      if @owner.update(owners_params)
+				redirect_to agency_building_owners_path(params[:agency_id], params[:building_id])
+      else
+      render :edit
+      end
+    end
+
 		def owners
 			@owners = Owner.all
 			@agency = Agency.find(params[:agency_id])
