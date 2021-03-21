@@ -1,5 +1,7 @@
 <div class="mr-3" style="float: right;">
-<%= link_to "Créer un Evenement",  new_agency_building_event_path, method: :get, class:"btn bt-theme  p-2 shadow rounded-pill"%>                                    
+<% if current_agency %>
+	<%= link_to "Créer un Evenement",  new_agency_building_event_path, method: :get, class:"btn bt-theme  p-2 shadow rounded-pill"%>
+<%end%>                                    
 </div>
 
 <div class="card margin-top" style=" filter: drop-shadow(0 0 0.15rem grey); margin-right:25%; margin-left: 25%;">
