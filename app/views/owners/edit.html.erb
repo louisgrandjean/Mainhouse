@@ -1,0 +1,42 @@
+<body>
+  <div class="login-form-bg h-100">
+    <div class="container h-100">
+      <div class="row justify-content-center h-100">
+        <div class="col-xl-6">
+          <div class="form-input-content">
+            <div class="card login-form mb-0">
+              <div class="card-body pt-5">
+                <a class="text-center" href="index.html"> <h4>Edit propriétaire</h4></a>
+                  <div class="form-group container" style="width: 30rem;">
+                    <%= form_tag agency_building_owner_path, method: "put" do %>
+                    <div class="form-group">
+                    <% text_field_tag 'building_id', params[:building_id] %>
+                    <% text_field_tag 'id', params[:id] %>
+            
+                    <%= label_tag 'Prénom' %>
+                    <%= text_field_tag 'first_name', @owner.first_name, class: "form-control mb-2" %>
+                    </div>
+                    <div class="form-group">
+                    <%= label_tag 'Nom' %>
+                    <%= text_area_tag 'last_name', @owner.last_name, class: "form-control mb-2" %>
+                    </div>
+                    <div class="form-group">
+                    <%= label_tag 'Email' %>
+                    <%= text_field_tag 'email', @owner.email, class: "form-control mb-2" %>
+                    </div>
+                    <div class="form-group">
+                    <%= label_tag 'Numéro de téléphone' %>
+                    <%= text_field_tag 'phone_number', @owner.phone_number, class: "form-control mb-2" %>
+                    </div>
+                    <%= submit_tag "Terminer", class: "form-control btn bt-theme" %>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
