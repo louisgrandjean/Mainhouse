@@ -7,6 +7,8 @@
   <%= owner.first_name %> </br>
   <%= owner.building.name %> </br>
   <%= owner.building.adress %> </br>
+  <%= button_to "Supprimer", agency_building_owner_path(params[:agency_id], params[:building_id], owner.id), method: :delete, class:"btn mb-1 btn-danger mt-3" %>
+
   <% end %>
   <% end %>
 </div>
