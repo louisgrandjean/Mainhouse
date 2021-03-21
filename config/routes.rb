@@ -5,10 +5,10 @@ Rails.application.routes.draw do
   resources :agencies do #, :path => "agence"
     resources :buildings do #, :path => "immeuble"
       resources :owners#, :path => "proprietaire"
+      resources :events#, :path => "evenement"
     end
   end
 
-  resources :events#, :path => "evenement"
   resources :messages#, :path => "discussions"
   root :to => "landing_pages#index"
   
