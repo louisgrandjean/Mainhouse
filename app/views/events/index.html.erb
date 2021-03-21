@@ -14,9 +14,10 @@
           <li class="list-group-item">Description : <%= event.description %></li> 
 					<li class="list-group-item">Début de lévénement : <%= event.datetime %></li>
           <li class="list-group-item">Durée en minutes : <%= event.duration %></li> 
-					<li class="list-group-item">Créé le : <%= event.created_at %></li> 
+					<li class="list-group-item">Modifié le : Créé le : <%= event.created_at%>, Modifié le : <%= event.updated_at %></li> 
         </ul>
 				<%=link_to "Modifier cet événement", edit_agency_building_event_path(params[:agency_id], params[:building_id], event.id), class: "btn mb-1 bt-theme mt-3 mr-1"%>
+				<%= link_to "Supprimer", agency_building_event_path(params[:agency_id], params[:building_id], event.id), :confirm => "Etes vous sur de supprimer cet événement ?", method: :delete, class:"btn mb-1 btn-danger mt-3" %> 
         </div>
 				</div>  
 			<% cnt+=1 %>

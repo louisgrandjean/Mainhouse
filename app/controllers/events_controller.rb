@@ -1,8 +1,6 @@
 class EventsController < ApplicationController
   def index
     @events = Event.all
-		
-
   end
 
   def new
@@ -10,12 +8,13 @@ class EventsController < ApplicationController
   end
   
   def create 
+
     @event = Event.new(event_params) 
     if @event.save
-      redirect_to agency_building_path(params[:agency_id], params[:building_id])
+      redirect_to agency_building_events_path(params[:agency_id], params[:building_id], params[:id])
     else 
       render :new
-    end
+		end
   end
 
 	def edit
@@ -25,10 +24,16 @@ class EventsController < ApplicationController
 	def update
 		@event = Event.find_by(building_id: params[:building_id], id: params[:id])
 		if @event.update(event_params)
-		redirect_to agency_building_path
+			redirect_to agency_building_events_path(params[:agency_id], params[:building_id], params[:id])
 		else
 		render :edit
 		end
+	end
+
+	def destroy 
+		@event = Event.find_by(building_id: params[:building_id], id: params[:id])
+		@event.delete
+		redirect_to agency_building_events_path(params[:agency_id], params[:building_id], params[:id])
 	end
 
 
