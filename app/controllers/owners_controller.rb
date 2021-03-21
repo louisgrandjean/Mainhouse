@@ -18,7 +18,19 @@ class OwnersController < ApplicationController
 			@owners = Owner.all
 		end
 
+		def new 
+			@owner = Owner.new
+		end 
+
     def create
+			@owner = Owner.new(owners_params)
+			@owner.password = "bienvenue"
+
+      if @owner.save
+        redirect_to agency_building_owners_path(current_agency.id, params[:building_id])
+      else 
+        render :new
+      end
     end
 
 		def owners
@@ -31,6 +43,17 @@ class OwnersController < ApplicationController
 		end
 			
 		end
+
+		def destroy 
+      @owner = Owner.find_by(building_id: params[:building_id], id: params[:id])
+      @owner.delete
+      redirect_to agency_building_owners_path(params[:agency_id], params[:building_id])
+    end
+
+		private
+    def owners_params
+      params.permit(:building_id, :first_name, :last_name, :phone_number, :email, :password)
+    end
 
 		
 end
