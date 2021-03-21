@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
     when Agency
       agency_buildings_path(current_agency)
     when Owner
-      root_path
+      agency_building_owner_path(current_owner.building.agency_id, current_owner.building.id, current_owner.id)
     end
   end
 

@@ -1,9 +1,9 @@
-<h1 style="margin-left: 30%;"> Bienvenue ! </h1>
+<h1 style="margin-left: 30%;"> Tous les propriétaires lié à l'agency <%= params[:agency_id] %> ! </h1>
 <div class="card" style="width: 40rem; filter: drop-shadow(0 0 0.15rem grey); margin-right:auto; margin-left:auto;">
 <div class="card-body">
 <% @owners.each do |owner| %>
   
-  <% if owner.building.id == params[:building_id].to_i %>
+  <% if owner.building.agency_id == params[:agency_id].to_i %>
   <%= owner.first_name %> </br>
   <%= owner.building.name %> </br>
   <%= owner.building.adress %> </br>

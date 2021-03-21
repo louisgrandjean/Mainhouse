@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   resources :messages#, :path => "discussions"
   root :to => "landing_pages#index"
+  get '/agencies/:agency_id/owners', to: 'owners#owners', as: 'all_owners'
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
