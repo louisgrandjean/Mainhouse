@@ -36,6 +36,16 @@ class EventsController < ApplicationController
 		redirect_to agency_building_events_path(params[:agency_id], params[:building_id], params[:id])
 	end
 
+	def events
+		@events = Event.all
+		@agency = Agency.find(params[:agency_id])
+		if @agency.id == current_agency.id
+			render :events
+		else 
+			redirect_to all_events_path(current_agency.id)
+		end
+	end
+
 
   private
   def event_params
