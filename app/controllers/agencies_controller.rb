@@ -27,6 +27,11 @@ def destroy
         @owner.delete
         @owner = Owner.find_by(building: build.id)
       end
+      @event = Event.find_by(building_id: build.id)
+      while @event != nil
+        @event.delete
+        @event = Event.find_by(building_id: build.id)
+      end
     build.delete
     end
   end

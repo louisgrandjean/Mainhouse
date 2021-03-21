@@ -53,6 +53,11 @@ class BuildingsController < ApplicationController
         @owner.delete
         @owner = Owner.find_by(building: @building.id)
       end
+      @event = Event.find_by(building_id: @building.id)
+      while @event != nil
+        @event.delete
+        @event = Event.find_by(building_id: @building.id)
+      end
       @building.delete
       redirect_to agency_buildings_path(params[:agency_id])
     end
