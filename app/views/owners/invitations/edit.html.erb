@@ -1,0 +1,37 @@
+<body>
+  <div class="login-form-bg h-100">
+    <div class="container h-100">
+      <div class="row justify-content-center h-100">
+        <div class="col-xl-6">
+          <div class="form-input-content">
+            <div class="card login-form mb-0">
+              <div class="card-body pt-5">
+                <a class="text-center" href="#"> <h2>Création de mot de passe</h2><br /></a>
+
+                    <%= form_for(resource, as: resource_name, url: invitation_path(resource_name), html: { method: :put }) do |f| %>
+                      <%= render "owners/shared/error_messages", resource: resource %>
+                      <%= f.hidden_field :invitation_token, readonly: true %>
+
+                      <% if f.object.class.require_password_on_accepting %>
+                        <div class="field">
+                          <%= f.label :mot_de_passe %><br />
+                          <%= f.password_field :password, class: "form-control mb-2" %><br />
+                        </div>
+
+                        <div class="field">
+                          <%= f.label :Confirmation %><br />
+                          <%= f.password_field :password_confirmation, class: "form-control mb-2" %><br />
+                        </div>
+                      <% end %>
+
+                      <div class="actions">
+                        <%= f.submit "Créer mon mot de passe", class: "form-control btn bt-theme" %>
+                      </div>
+                    <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
