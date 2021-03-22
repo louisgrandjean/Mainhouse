@@ -11,9 +11,6 @@ class OwnersController < ApplicationController
 			end
     end
     
-
-
-
 		def index
 			@owners = Owner.all
 		end
@@ -24,20 +21,21 @@ class OwnersController < ApplicationController
 
     def create
 			@owner = Owner.new(owners_params)
-			@owner.password = "bienvenue"
-
+      Owner.invite!(owners_params)
       if @owner.save
         redirect_to agency_building_owners_path(current_agency.id, params[:building_id])
       else 
         render :new
       end
+
+
     end
 
 		def edit
       @owner = Owner.find_by(building_id: params[:building_id], id: params[:id])
       if @owner.nil?
         redirect_to agency_building_owners_path(params[:agency_id], params[:building_id])
-    end
+      end
     end
 
     def update

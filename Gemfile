@@ -67,3 +67,6 @@ gem 'devise'
 gem 'mailjet'
 gem 'dotenv-rails'
 gem 'stripe'
+
+gem 'devise_invitable', '~> 2.0.0'
+gem "letter_opener"
