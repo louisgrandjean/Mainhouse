@@ -11,9 +11,6 @@ class OwnersController < ApplicationController
 			end
     end
     
-
-
-
 		def index
 			@owners = Owner.all
 		end
@@ -37,7 +34,7 @@ class OwnersController < ApplicationController
       @owner = Owner.find_by(building_id: params[:building_id], id: params[:id])
       if @owner.nil?
         redirect_to agency_building_owners_path(params[:agency_id], params[:building_id])
-    end
+      end
     end
 
     def update

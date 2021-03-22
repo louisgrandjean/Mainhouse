@@ -6,4 +6,11 @@ class Owner < ApplicationRecord
 
   belongs_to :building
   has_many :messages
+
+  after_create :welcome_send
+
+  def welcome_send
+    OwnerMailer.welcome_email(self).deliver_now
+  end
+
 end
