@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :buildings do #, :path => "immeuble"
       resources :owners#, :path => "proprietaire"
       resources :events#, :path => "evenement"
+      resources :messages#, :parh=> "chat"
     end
   end
 
