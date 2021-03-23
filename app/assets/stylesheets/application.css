@@ -15,6 +15,7 @@
  *= require pignose.calendar.min
  *= require style
  *= require landing_page
+ *= require chat
  *
  *= require_tree .
  *= require_self
