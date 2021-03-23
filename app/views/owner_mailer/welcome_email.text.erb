@@ -1,0 +1,17 @@
+Bonjour <%= @owner.first_name %>, et bienvenue chez vous !
+
+==========================================================    
+
+Vous disposez désormais d'une plateforme connectée qui vous permet de gérer votre bien immobilier en toute sérénité !
+
+  Vos identifiants sont les suivants : 
+      Login : <%= @owner.email %>
+      Mot de passe :<%= @owner.first_name%>Bienvenue
+
+  Pour accéder à votre espace client, connectez-vous via : <%= @url %>owners/sign_in
+
+  Nous vous conseillons vivement de changer votre mot de passe dès votre première connexion sur ce lien :
+  <%= @url %>owners/password/edit
+  Ou sur la page "Mon Profil"
+
+À très vite sur mainHouse.com !
