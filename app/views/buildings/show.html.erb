@@ -1,6 +1,10 @@
 
 <div class="card " style="width: 40rem; filter: drop-shadow(0 0 0.15rem grey); margin-right:auto; margin-left: auto;">
-  <img class="card-img-top" src="<%= @building.picture %>" alt="Card image cap">
+<%if @building.avatar.attached?%>
+  <%= image_tag @building.avatar, alt: 'avatar', class: "card-img-top" %>
+<%else%>
+  <img class="card-img-top" src="https://www.cartefinancement.com/wp-content/uploads/2019/10/vir-1024x682.jpg" alt="Card image cap">
+<%end%>
   <div class="card-body">
     <h5 class="card-title"><%= @building.name %></h5>
     <p class="card-text">Id: <%= @building.id %></p>
@@ -12,7 +16,8 @@
     <%=link_to "Ajouter des propriétaires", new_agency_building_owner_path(current_agency.id, params[:id]), class: "btn mb-1 bt-theme mt-3 mr-1"%>
     <%=link_to "Editer", edit_agency_building_path, class: "btn mb-1 bt-theme mt-3 mr-1"%>
     <%= link_to "Afficher les événements",  agency_building_events_path(params[:agency_id], params[:id]), method: :get, class:"btn mb-1 btn-success mt-3"%> 
-    <%= link_to "Supprimer", agency_building_path(params[:agency_id], params[:id]), :confirm => "Etes vous sur de supprimer cet immeuble ?", method: :delete, class:"btn mb-1 btn-danger mt-3" %> 
+    <%= link_to "Supprimer", agency_building_path(params[:agency_id], params[:id]), :confirm => "Etes vous sur de supprimer cet immeuble ?", method: :delete, class:"btn mb-1 btn-danger mt-3" %>
+    
     
    
   </div>
