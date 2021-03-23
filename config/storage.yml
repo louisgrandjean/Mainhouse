@@ -13,7 +13,7 @@ local:
    access_key_id: "AKIA55CFYI5TTEJPWQ7W"
    secret_access_key: "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"
    region: us-east-1
-   bucket: Mainhouse
+   bucket: arn:aws:iam::955776517991:group/Mainhouse
 
 # Remember not to checkin your GCS keyfile to a repository
 # google:
