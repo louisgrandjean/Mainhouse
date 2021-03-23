@@ -2,10 +2,13 @@ Rails.application.routes.draw do
   devise_for :owners
   devise_for :agencies
 
+  resources :subscriptions, only: [:new, :update]
+
   resources :agencies do #, :path => "agence"
     resources :buildings do #, :path => "immeuble"
       resources :owners#, :path => "proprietaire"
       resources :events#, :path => "evenement"
+      resources :messages#, :parh=> "chat"
     end
   end
 

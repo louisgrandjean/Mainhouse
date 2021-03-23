@@ -5,6 +5,7 @@ class Owner < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   belongs_to :building
+
   has_many :messages
 
   after_create :welcome_send
@@ -12,5 +13,6 @@ class Owner < ApplicationRecord
   def welcome_send
     OwnerMailer.welcome_email(self).deliver_now
   end
+
 
 end
