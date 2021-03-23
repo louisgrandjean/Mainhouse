@@ -67,6 +67,6 @@ gem 'devise'
 gem 'mailjet'
 gem 'dotenv-rails'
 gem 'stripe'
-gem "aws-sdk-s3", require: false
+gem "aws-sdk-s3"
 
 gem "letter_opener", :group => :development
