@@ -1,7 +1,8 @@
-<h1> Bienvenue <%= @owner.first_name %> <%= @owner.last_name %> ! </h1>
+
 <div class="card" style="width: 40rem; filter: drop-shadow(0 0 0.15rem grey); margin-right:auto; margin-left:auto;">
   
   <div class="card-body">
+    <h2> Bienvenue  sur votre profil, <%= @owner.first_name %> <%= @owner.last_name %> ! </h2>
     <p class="card-text">Id : <%= @owner.id %></p>
     <p class="card-text">Adresse de votre propriété : <%=@building.adress%></p>
     <p class="card-text">Votre numéro de téléphone : <%=@owner.phone_number%></p> 
@@ -9,15 +10,9 @@
     <p class="card-text">Votre agence : <%=@agency.name%></p>
     <p class="card-text">Localisée au : <%=@agency.adress%>, à <%=@agency.city%></p>
     <p class="card-text">Vous pouvez la contacter au : <%=@agency.phone_number%></p>
-
-   
-  <!--**********************************
-    Pas de bouton supprimer ni éditer pour les owners ?
-
-    <% link_to "Editer", edit_agency_building_owner_path(params[:agency_id], params[:building_id], params[:id]), class: "btn mb-1 bt-theme mt-3 mr-1"%>
-    <% link_to "Supprimer", agency_building_owner_path(params[:agency_id], params[:building_id], params[:id]), :confirm => "Etes vous sur de supprimer cet immeuble ?", method: :delete, class:"btn mb-1 btn-danger mt-3" %> 
-  
-  ***********************************-->
+    <br />
+    <%= link_to "Editer les informations", edit_agency_building_owner_path(params[:agency_id], params[:building_id], params[:id]), class:"btn bt-theme  p-2 shadow rounded-pill"%>
+    <%= link_to "Editer le mot de passe", edit_owner_registration_path, class:"btn btn-success  p-2 shadow rounded-pill", style:"margin-left: 45%;"%>
 
   </div>
 </div>

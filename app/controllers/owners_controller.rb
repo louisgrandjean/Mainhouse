@@ -1,5 +1,5 @@
 class OwnersController < ApplicationController
-	before_action :authenticate_agency!, only: [:index, :owners]
+	before_action :authenticate_agency!, only: [:owners]
 
     def show
 			@owner = Owner.find_by(building_id: params[:building_id], id: current_owner)
@@ -42,7 +42,7 @@ class OwnersController < ApplicationController
     def update
       @owner = Owner.find_by(building_id: params[:building_id], id: params[:id])
       if @owner.update(owners_params)
-				redirect_to agency_building_owners_path(params[:agency_id], params[:building_id])
+				redirect_to agency_building_owner_path(params[:agency_id], params[:building_id], params[:id])
       else
       render :edit
       end
