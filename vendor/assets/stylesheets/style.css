@@ -151,12 +151,12 @@ section {
 body {
     margin: 0;
     font-family: "Roboto", sans-serif;
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     color: #76838f;
     text-align: left;
-    background-color: #F3F3F9;
+    background-color: rgb(251, 251, 253);
 }
 
 [tabindex="-1"]:focus {
@@ -2499,7 +2499,7 @@ textarea.form-control {
 .btn:focus,
 .btn.focus {
     outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(117, 113, 249, 0.25);
+    box-shadow: 0 0 0 0.2rem rgba(74, 74, 75, 0.25);
 }
 
 .btn.disabled,
@@ -2524,7 +2524,7 @@ fieldset:disabled a.btn {
 
 .btn-primary:hover {
     color: #fff;
-    background-color: #514cf7;
+    background-color: #000000;
     border-color: #4540f7;
 }
 
@@ -10574,7 +10574,7 @@ sub {
     text-align: left;
     left: 0;
     top: 0;
-    background: #FF9F1C;
+    background: #3D405B;
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
     transition: all .2s ease;
 }
@@ -11358,7 +11358,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     position: fixed;
     padding-top: 0;
     z-index: 99;
-    background: #fff;
+    background: #CECFDE;
     transition: all .2s ease;
 }
 
@@ -11383,7 +11383,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    background: #fff;
+    background: #CECFDE;
 }
 
 .nk-sidebar .metismenu>li {
@@ -11395,7 +11395,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     -ms-flex-direction: column;
     flex-direction: column;
     position: relative;
-    color: #464a53;
+    color: #000000;
 }
 
 .nk-sidebar .metismenu>li>a {
@@ -11442,7 +11442,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     padding: 0.8125rem 1.25rem;
     outline-width: 0;
     transition: all .3s ease-out;
-    color: #464a53;
+    color: black;
 }
 
 .nk-sidebar .metismenu ul a {
@@ -20899,4 +20899,22 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
     width: 100%;
     bottom: 0;
     list-style-type: none;
+}
+
+.btn-theme2 {
+    background-color: #EEBC6D;
+    color: white;
+}
+
+.btn-theme2:hover {
+    color: black;
+}
+
+.btn-theme3 {
+    background-color: #EEBC6D;
+    color: white;
+}
+
+.btn-theme3:hover {
+    color: black;
 }
