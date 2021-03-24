@@ -22,7 +22,9 @@
                     <%= label_tag 'Référence' %>
                     <%= text_field_tag 'reference', @building.reference, class: "form-control mb-2" %>
                     </div>
-                    <%= file_field_tag :avatar %>
+                    <br />
+                    <%= file_field_tag :avatar, class: "form-control btn" %>
+                    <br />                    <br />                    <br />
                     <%= submit_tag "Terminer", class: "form-control btn bt-theme" %>
                     <% end %>
                   </div>
