@@ -68,4 +68,5 @@ gem 'mailjet'
 gem 'dotenv-rails'
 gem 'stripe'
 
+gem "aws-sdk-s3", require: false
 gem "letter_opener", :group => :development
