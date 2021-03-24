@@ -9,7 +9,7 @@
   
     <% @buildings.each do |building| %>
       <% if building.agency.id == current_agency.id%> 
-        <div class="col-md-4 margin-top">
+        <div class="col-md-4">
           <div class="card text-center ml-5" style="width: 18rem;">
             <%if building.avatar.attached?%>
   <%= image_tag building.avatar, alt: 'avatar', class: "card-img-top" %>
