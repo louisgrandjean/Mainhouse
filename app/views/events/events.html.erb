@@ -1,34 +1,47 @@
-<div class="mr-3" style="float: right;">                               
+<div class="mr-3" style="float: right;">
+	<% if current_agency %>
+	<% end %>                                    
 </div>
-<div class="card margin-top" style=" filter: drop-shadow(0 0 0.15rem grey); margin-right:25%; margin-left: 25%;">
-	<div class="card-body">
-		<% cnt = 0 %>
-		<% @events.each do |event| %>
-			<% if event.building.agency_id == params[:agency_id].to_i %> 
-				<div class="card " style=" filter: drop-shadow(0 0 0.06rem grey); margin-right:5%; margin-left: 5%;">
-					<div class="card-body">
-        		<ul class="list-group list-group-flush">
-							<li class="list-group-item">Immeuble ID :<%= event.building_id %></li>
-          		<li class="list-group-item"><%= event.title %></li>
-          		<li class="list-group-item">Description : <%= event.description %></li> 
-							<li class="list-group-item">Début de lévénement : <%= event.datetime %></li>
-          		<li class="list-group-item">Durée en minutes : <%= event.duration %></li> 
-							<li class="list-group-item">Modifié le : Créé le : <%= event.created_at%>, Modifié le : <%= event.updated_at %></li> 
-        		</ul>
-						<% if current_agency %>
-							<%=link_to "Modifier cet événement", edit_agency_building_event_path(params[:agency_id], event.building_id, event.id), class: "btn mb-1 bt-theme mt-3 mr-1"%>
-							<%= link_to "Supprimer", agency_building_event_path(params[:agency_id], event.building_id, event.id), :confirm => "Etes vous sur de supprimer cet événement ?", method: :delete, class:"btn mb-1 btn-danger mt-3" %>
+<div class="col-xl-12 margin-top" >
+	<div class="card" style="margin-right:25%; margin-left: 25%;">
+		<div class="card-body" >
+        <h4 class="card-title">Les événements de mon immeuble :</h4>
+        <div class="basic-list-group"
+          <div class="list-group">
+						<% cnt = 0 %>
+						<% @events.each do |event| %>
+							<% if event.building.agency_id == params[:agency_id].to_i %> 
+								<div class="dropdown2">
+									<% if current_agency %>
+										<div class="dropdown2-content" style="margin-left: 81%; margin-top: 2%;">
+										<%=link_to "Modifier", edit_agency_building_event_path(params[:agency_id], event.building_id, event.id), class: "btn mb-1 dropbtn3 mt-3 mr-1"%>
+										<%= link_to "Supprimer", agency_building_event_path(params[:agency_id], event.building_id, event.id), method: :delete, class:"btn mb-1 dropbtn4 mr-1" %>
+										</div>
+									<% end %> 
+                	<a class="list-group-item list-group-item-action flex-column align-items-start">
+                  	<div class="d-flex w-100 justify-content-between">
+                    	<h5 class="mb-1"><%= event.title %></h5><small>Evénement prévu le : <%= event.datetime %></small>
+                  	</div>
+                  	<p class="mb-1 "><%= event.description %></p>
+										<div>
+											<p><small>Durée : <%= event.duration %> minutes.</small>
+											<p>
+										</div>
+                  </a>
+								</div>
+							</div>
+							<% cnt+=1 %>
 						<% end %>
-        	</div>
-				</div>  
-				<% cnt+=1 %>
-				<% end %>
-  		<% end %>
-			<% if cnt == 0%>
-				<div class= text-center>
-					<h1> Aucun événement est prévu pour mes immeubles ! </h1>
-				</div>
-			<% end %>
+					<% end %>
+						<% if cnt == 0%>						
+							<h2 class="mb-1 text-center">Aucun événement prévu !</h2>
+						<% end %>
+					</div>
+        </div>							
+      </div>
 		</div>
 	</div>
 </div>
+
+
+				
