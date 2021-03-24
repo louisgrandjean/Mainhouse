@@ -27,6 +27,7 @@
                       <%= label_tag 'SIREN' %>
                       <%= text_area_tag 'siren', @agency.siren, class: "form-control mb-2" %>                    
                       <br />
+                      <%= file_field_tag :avatar, class: "btn mb-4 ml-5"%>
                       <%= submit_tag "Editer vos informations", class: "btn login-form__btn submit w-100" %>
 
                       <% end %>
