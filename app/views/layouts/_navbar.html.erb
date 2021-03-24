@@ -65,7 +65,7 @@
         ***********************************-->
 
 
-<% elsif owner_signed_in? %>
+<% elsif owner_signed_in? && !(current_page?(edit_owner_registration_path(current_owner)))%>
 <%-# code de la navbar Owner -%>
 
 <!--**********************************
@@ -108,13 +108,13 @@
                   <span> <%= link_to "Messagerie Agence", class: "nav-text"%> </span> </li>
                 </li>
                 <li>
-                  <span> <%= link_to "Messagerie Immeuble", agency_building_messages_path, class: "nav-text"%> </span> </li>
+                  <span> <%= link_to "Messagerie Immeuble", agency_building_messages_path(params[:agency_id], params[:building_id]), class: "nav-text"%> </span> </li>
                 </li>
               </ul>
             </li>
 
             <li>
-            <span> <%= link_to "Événements", agency_building_events_path, class: "nav-text"%> </span </li>
+            <span> <%= link_to "Événements", agency_building_events_path(params[:agency_id], params[:building_id]), class: "nav-text"%> </span> </li>
             </li>
           </li>
         </ul>
