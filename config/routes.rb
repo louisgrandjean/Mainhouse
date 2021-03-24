@@ -8,11 +8,10 @@ Rails.application.routes.draw do
     resources :buildings do #, :path => "immeuble"
       resources :owners#, :path => "proprietaire"
       resources :events#, :path => "evenement"
-      resources :messages#, :parh=> "chat"
+      resources :messages#, :path=> "chat"
     end
   end
 
-  resources :messages#, :path => "discussions"
   root :to => "landing_pages#index"
   get '/agencies/:agency_id/owners', to: 'owners#owners', as: 'all_owners'
   get '/agencies/:agency_id/events', to: 'events#events', as: 'all_events'
