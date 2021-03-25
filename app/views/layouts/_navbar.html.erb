@@ -41,8 +41,7 @@
               <span> <%= link_to "Mes événements", all_events_path(current_agency.id), class: "nav-text"%> </span> </li>
             </li>
 
-            <li>
-              <span> <%= link_to "Ma messagerie", class: "nav-text"%> </span> </li>
+
             </ul>
         </div>
         <div class="nk-nav-scroll  sidebar-footer">
@@ -95,10 +94,10 @@
         </li>
         <li class="nav-label">Dashboard</li>
         <li>
-          <span> <%= link_to "Messagerie Immeuble", agency_building_messages_path(params[:agency_id], params[:building_id]), class: "nav-text"%> </span> </li>
+          <span> <%= link_to "Ma messagerie", agency_building_messages_path(params[:agency_id], params[:building_id]), class: "nav-text"%> </span> </li>
         </li>
         <li>
-        <span> <%= link_to "Événements", agency_building_events_path(params[:agency_id], params[:building_id]), class: "nav-text"%> </span> </li>
+        <span> <%= link_to "Mes événements", agency_building_events_path(params[:agency_id], params[:building_id]), class: "nav-text"%> </span> </li>
         </li>
       </li>
       </ul>
