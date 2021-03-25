@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :owners
+  devise_for :owners, controllers: { invitations: 'owners/invitations' }
   devise_for :agencies
 
   resources :subscriptions, only: [:new, :update]

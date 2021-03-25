@@ -8,11 +8,11 @@ class Owner < ApplicationRecord
 
   has_many :messages
 
-  after_create :welcome_send
+  after_create :invite_owner
 
-  def welcome_send
-    OwnerMailer.welcome_email(self).deliver_now
+  def invite_owner
+    owner = Owner.new
+    owner.invite!(email: owner.email)
   end
-
-
+    
 end
