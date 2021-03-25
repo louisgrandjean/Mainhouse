@@ -10574,7 +10574,8 @@ sub {
     text-align: left;
     left: 0;
     top: 0;
-    background: #3D405B;
+    background: #ff9F1C;
+    opacity: 0.7;
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
     transition: all .2s ease;
 }
@@ -11358,7 +11359,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     position: fixed;
     padding-top: 0;
     z-index: 99;
-    background: #CECFDE;
+    background: #ffffff;
     transition: all .2s ease;
 }
 
@@ -11383,7 +11384,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    background: #CECFDE;
+    background: #ffffff;
 }
 
 .nk-sidebar .metismenu>li {
@@ -20902,7 +20903,7 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
 }
 
 .btn-theme2 {
-    background-color: #EEBC6D;
+    background-color: #ff9F1C;
     color: white;
 }
 
@@ -20911,7 +20912,7 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
 }
 
 .btn-theme3 {
-    background-color: #EEBC6D;
+    background-color: #ff9F1C;
     color: white;
 }
 
