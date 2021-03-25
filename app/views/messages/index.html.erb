@@ -1,7 +1,7 @@
 	<div class=" overflow-hidden " style=" filter: drop-shadow(0 0 0.15rem grey); margin-right:20%; margin-left: 20%;" >
   	<div class="col-7 px-0">
 			<div class="text-center">
-				<h3>Mon immeuble</h3>
+				
 			</div>
       <div class="px-4 py-5 chat-box bg-white  ">
 				<% Message.all.each do |message| %>
@@ -49,14 +49,27 @@
 					<% end %>
       	<% end %>
 			</div>
-      <form action="" class="bg-light">
-        <div class="input-group">
-          <input  type="text" placeholder="Ecrire un méssage" aria-describedby="button-addon2" class="form-control rounded-0 border-0 py-4 bg-light"><%= params["content"] %>
-					<%= link_to "Créer un Message",  new_agency_building_message_path, method: :get, class:"btn bt-theme  p-2 shadow rounded-pill"%>
+      
+			<div class="panel-footer">
+                   
+			<%= form_tag agency_building_messages_path, method: "post", class:"bg-light" do %>
+				<div class="input-group">
+				<div class="form-group form-control rounded-0 border-0">
+				
+				<%= text_field_tag('content', nil, class: 'form-group form-control rounded-0 border-0 py-4 top', placeholder: 'Tapez votre message ici') %>
+				</div>
+				<%= submit_tag "Envoyez", class:"btn bt-theme  p-2 shadow rounded-pill" %>
+				
+				<div class="input-group-append">  
+					</span>
+			</div>
+			</div>
+			<% end %>
+</div>
+
           <div class="input-group-append">	
           </div>
         </div>
-      </form>
-    </div>
+   
   </div>
 </div>

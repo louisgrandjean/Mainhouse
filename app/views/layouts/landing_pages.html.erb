@@ -26,19 +26,19 @@
 		</div>
 	</div>
 </section>    
-
 <section>  
   <div class="container py-4 margin-top">
     <div class="row align-items-center">
       <div class="col-md-5">
         <div class="welcome-text-area">
           <h1  style="visibility: visible;">La plateforme Saas dédiée à la gestion des copropriétés</h1>
-          <h5  style="visibility: visible;">Apland is a completely creative, lightweight, clean &amp; super responsive app landing page. Put your app sales or promotions into next level with it.</h5>
+          <p  class="mt-3" style="visibility: visible;">MainMouse est le premier service dédié aux agences et aux propriétaires pour gérer et faire vivre leurs copropriétés. Messagerie personnalisée, gestion d'événements, nous avons pensé à tout !</p>
+					<h5 style="visibility: visible;">Vous êtes une agence ? Découvrez notre offre ci-dessous :</h5>
         </div>
       </div>
         <div class="col-md-7">
           <div class="">
-            <%= image_tag("landing/landing.png", height: '500', width: '800', alt: "rss feed") %>
+            <%= image_tag("landing/image_accueil.png", height: '500', width: '800', alt: "rss feed") %>
           </div>  
         </div>
       </div>
@@ -50,32 +50,32 @@
 	</div>
 </section>
 
-		<hr>
+<hr class="mt-5 mb-5 mx-auto" style="width: 50%;">
     
 <section>
   <div class="container py-5">
     <div class="row text-center align-items-end">
       <div class="col-lg-4 mb-5 mb-lg-0">
       	<div class="" style="width: 18rem;">
-      		<img class="card-img-top rounded-circle pimg border-theme" src="https://graphiste.com/blog/wp-content/uploads/2017/03/logo-immobilier-8.png" alt="Card image cap">
+      		<%= image_tag("landing/immeuble.png", class:"card-img-top rounded-circle pimg border-theme", alt:"Card image cap")%>
       		<div class="card-body">
-        		<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        		<p class="card-text">Gérez les copropriétés de tous vos immeubles sur une seule plateforme</p>
       		</div>
       	</div>
       </div>
       <div class="col-lg-4 mb-5 mb-lg-0">
       	<div class="" style="width: 18rem;">
-      		<img class="card-img-top rounded-circle pimg border-theme" src="https://graphiste.com/blog/wp-content/uploads/2017/03/logo-immobilier-8.png" alt="Card image cap">
+      		<%= image_tag("landing/humains.png", class:"card-img-top rounded-circle pimg border-theme", alt:"Card image cap")%>
       		<div class="card-body">
-        		<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        		<p class="card-text">Faites vivre votre copropriété grâce à une messagerie dédiée à chaque immeuble</p>
       		</div>
       	</div>
       </div>
       <div class="col-lg-4">
       	<div class="" style="width: 18rem;">
-      		<img class="card-img-top rounded-circle pimg border-theme" src="https://graphiste.com/blog/wp-content/uploads/2017/03/logo-immobilier-8.png" alt="Card image cap">
+      		<%= image_tag("landing/evenement.png", class:"card-img-top rounded-circle pimg border-theme", alt:"Card image cap")%>
       		<div class="card-body">
-        		<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        		<p class="card-text">Retrouvez tous les événements liés à vos copropriétés au même endroit</p>
       		</div>
       	</div>
       </div>
@@ -83,83 +83,69 @@
   </div>
 </section>
 
-<hr>
+<hr class="mt-5 mb-5 mx-auto" style="width: 50%;">
 
 <section>
 	<div class="container py-5">
   	<div class="row text-center align-items-end">
-    	<div class="col-lg-4 mb-5 mb-lg-0">
+    	<div class="col-lg-4 mb-5 mb-lg-3">
       	<div class="bg-white p-5 rounded-lg shadow">
         	<h1 class="h6 text-uppercase font-weight-bold mb-4">Basic</h1>
-        	<h2 class="h1 font-weight-bold">$199<span class="text-small font-weight-normal ml-2">/ month</span></h2>
+        	<h2 class="h1 font-weight-bold">€ 59,99<span class="text-small font-weight-normal ml-2">/mois HT</span></h2>
         	<div class="custom-separator my-4 mx-auto bg-theme"></div>
         		<ul class="list-unstyled my-5 text-small text-left">
           		<li class="mb-3">
-            		<i class="fa fa-check mr-2 text-primary"></i> Lorem ipsum dolor sit amet</li>
+            		<i class="fa fa-check mr-2 text-primary"></i> Premier mois gratuit </li>
+							<li class="mb-3">
+            		<i class="fa fa-check mr-2 text-primary"></i> Sans engagement </li>
           		<li class="mb-3">
-           			<i class="fa fa-check mr-2 text-primary"></i> Sed ut perspiciatis</li>
+           			<i class="fa fa-check mr-2 text-primary"></i> De 1 à 9 immeubles </li>
           		<li class="mb-3">
-            		<i class="fa fa-check mr-2 text-primary"></i> At vero eos et accusamus</li>
-          		<li class="mb-3 text-muted">
-            		<i class="fa fa-times mr-2"></i>
-            		<del>Nam libero tempore</del>
-          		</li>
-          		<li class="mb-3 text-muted">
-            		<i class="fa fa-times mr-2"></i>
-            		<del>Sed ut perspiciatis</del>
-          			</li>
-          		<li class="mb-3 text-muted">
-            		<i class="fa fa-times mr-2"></i>
-            		<del>Sed ut perspiciatis</del>
-          	</li>
+            		<i class="fa fa-check mr-2 text-primary"></i> Accès à une messagerie par immeuble </li>
+							<li class="mb-3">	
+            		<i class="fa fa-check mr-2 text-primary"></i> Calendrier par immeuble et mutualisé </li>
         	</ul>
-        	<a href="#" class="btn bt-theme btn-block p-2 shadow rounded-pill">Subscribe</a>
+        	<a href="#" class="btn bt-theme btn-block p-2 shadow rounded-pill" style="background-color: #ff9F1C;">Inscrivez-vous</a>
       	</div>
     	</div>
-    	<div class="col-lg-4 mb-5 mb-lg-0">
+    	<div class="col-lg-4 mb-5 mb-lg-3">
       	<div class="bg-white p-5 rounded-lg shadow">
-        	<h1 class="h6 text-uppercase font-weight-bold mb-4">Pro</h1>
-        	<h2 class="h1 font-weight-bold">$399<span class="text-small font-weight-normal ml-2">/ month</span></h2>
+        	<h1 class="h6 text-uppercase font-weight-bold mb-4">Premium</h1>
+        	<h2 class="h1 font-weight-bold">€ 99,99<span class="text-small font-weight-normal ml-2">/mois HT</span></h2>
         	<div class="custom-separator my-4 mx-auto bg-theme"></div>
         		<ul class="list-unstyled my-5 text-small text-left font-weight-normal">
           		<li class="mb-3">
-            		<i class="fa fa-check mr-2 text-primary"></i> Lorem ipsum dolor sit amet</li>
+            		<i class="fa fa-check mr-2 text-primary"></i> Premier mois gratuit </li>
           		<li class="mb-3">
-            		<i class="fa fa-check mr-2 text-primary"></i> Sed ut perspiciatis</li>
+            		<i class="fa fa-check mr-2 text-primary"></i> Sans engagement </li>
           		<li class="mb-3">
-            		<i class="fa fa-check mr-2 text-primary"></i> At vero eos et accusamus</li>
+            		<i class="fa fa-check mr-2 text-primary"></i> De 10 à 19 immeubles </li>
           		<li class="mb-3">
-            		<i class="fa fa-check mr-2 text-primary"></i> Nam libero tempore</li>
+            		<i class="fa fa-check mr-2 text-primary"></i> Accès à une messagerie par immeuble </li>
           		<li class="mb-3">
-            		<i class="fa fa-check mr-2 text-primary"></i> Sed ut perspiciatis</li>
-          		<li class="mb-3 text-muted">
-            		<i class="fa fa-times mr-2"></i>
-            		<del>Sed ut perspiciatis</del>
-          		</li>
+            		<i class="fa fa-check mr-2 text-primary"></i> Calendrier par immeuble et mutualisé </li>
         		</ul>
-        		<a href="#" class="btn bt-theme btn-block p-2 shadow rounded-pill">Subscribe</a>
+        		<a href="#" class="btn bt-theme btn-block p-2 shadow rounded-pill" style="background-color: #ff9F1C;">Inscrivez-vous</a>
       		</div>
     		</div>
-    			<div class="col-lg-4">
+    			<div class="col-lg-4 mb-lg-3">
       			<div class="bg-white p-5 rounded-lg shadow">
-        			<h1 class="h6 text-uppercase font-weight-bold mb-4">Enterprise</h1>
-       				<h2 class="h1 font-weight-bold">$899<span class="text-small font-weight-normal ml-2">/ month</span></h2>
+        			<h1 class="h6 text-uppercase font-weight-bold mb-4 mt-2">Personnalisé</h1>
+       				<h2 class="h2 font-weight-bold">Contactez-nous<span class="text-small font-weight-normal ml-2"></span></h2>
         			<div class="custom-separator my-4 mx-auto bg-theme"></div>
         				<ul class="list-unstyled my-5 text-small text-left font-weight-normal">
-          				<li class="mb-3">
-            				<i class="fa fa-check mr-2 text-primary"></i> Lorem ipsum dolor sit amet</li>
-          				<li class="mb-3">
-            				<i class="fa fa-check mr-2 text-primary"></i> Sed ut perspiciatis</li>
-          				<li class="mb-3">
-            				<i class="fa fa-check mr-2 text-primary"></i> At vero eos et accusamus</li>
-          				<li class="mb-3">
-            				<i class="fa fa-check mr-2 text-primary"></i> Nam libero tempore</li>
-          				<li class="mb-3">
-            				<i class="fa fa-check mr-2 text-primary"></i> Sed ut perspiciatis</li>
-          				<li class="mb-3">
-            				<i class="fa fa-check mr-2 text-primary"></i> Sed ut perspiciatis</li>
+          		<li class="mb-3">
+            		<i class="fa fa-check mr-2 text-primary"></i> Premier mois gratuit </li>
+							<li class="mb-3">
+            		<i class="fa fa-check mr-2 text-primary"></i> Sans engagement </li>
+          		<li class="mb-3">
+            		<i class="fa fa-check mr-2 text-primary"></i> À Partir de 20 immeubles </li>
+          		<li class="mb-3">
+            		<i class="fa fa-check mr-2 text-primary"></i> Accès à une messagerie par immeuble </li>
+          		<li class="mb-3">
+            		<i class="fa fa-check mr-2 text-primary"></i> Calendrier par immeuble et mutualisé </li>
         				</ul>
-        				<a href="#" class="btn bt-theme btn-block p-2 shadow rounded-pill">Subscribe</a>
+        				<a href="#" class="btn bt-theme btn-block p-2 shadow rounded-pill" style="background-color: #ff9F1C;">Inscrivez-vous</a>
       				</div>
     				</div>
   				</div>
@@ -169,9 +155,10 @@
 	</div>
 </section>
 
-
-<h3 class="banner ">
-  <div class="wrap text-center ">Contactez l'équipe mainhouse pour un plan personnalisé au 07.66.38.94.57</div>
-</h3>
+<%= button_to "Rejoignez-nous !", new_agency_registration_path, method: :get, class:"btn btn-block bt1-lp p-5 bt-landing mt-5", style:"border-radius: 0px; font-size: 50px;"%>
+<a href="#" class="btn bt-theme btn-block p-3 shadow rounded-pill "></a>
+  <div class="wrap text-center">
+	<p class="mt-3">Contactez l'équipe mainhouse pour un plan personnalisé au 07.66.38.94.57</p>
+	</div>
 </html>
 </body>

@@ -1,6 +1,6 @@
 
 <div class="mr-3" style="float: right;">
-<%= link_to "Créer un immeuble",  new_agency_building_path, method: :get, class:"btn bt-theme  p-2 shadow rounded-pill"%>                                    
+<%= link_to "Créer un immeuble",  new_agency_building_path, method: :get, class:"btn btn-theme3  p-2 shadow rounded-pill"%>                                    
 </div>
 
 <div class="container">
@@ -9,7 +9,7 @@
   
     <% @buildings.each do |building| %>
       <% if building.agency.id == current_agency.id%> 
-        <div class="col-md-4 margin-top">
+        <div class="col-md-4">
           <div class="card text-center ml-5" style="width: 18rem;">
             <%if building.avatar.attached?%>
   <%= image_tag building.avatar, alt: 'avatar', class: "card-img-top" %>
@@ -24,7 +24,7 @@
               <li class="list-group-item">Id de l'immeuble : <%= building.id %></li> 
             </ul>
               <div class="card-body">
-                <%= link_to "Afficher cet immeuble",  agency_building_path(params[:agency_id], building.id), method: :get, class:"btn bt-theme  p-2 shadow rounded-pill"%>
+                <%= link_to "Afficher cet immeuble",  agency_building_path(params[:agency_id], building.id), method: :get, class:"btn btn-theme2  p-2 shadow rounded-pill"%>
               </div>
             </div>
           </div>
