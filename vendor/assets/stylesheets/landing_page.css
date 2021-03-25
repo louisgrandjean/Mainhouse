@@ -145,27 +145,13 @@
 }
 
 .bodyt{
-  background-color: rgb(255, 255, 255);
-}
-
-.dropbtn3 {
-  
-  color: white;
-  background-color: rgb(43, 238, 4) ;
-  position: relative;
-  
-
-  width: 90px;
-  border: none;
-  cursor: pointer;
-  z-index: 1;
+  background-color: rgb(255, 255, 255);center-top
 }
 
 .dropbtn4 {
   color: white;
   background-color: rgb(238, 4, 4) ;
-position: relative;
-
+  position: relative;
   width: 90px;
   border: none;
   cursor: pointer;
@@ -193,4 +179,8 @@ position: relative;
 /* Show the dropdown menu on hover */
 .dropdown2:hover .dropdown2-content {
 display: block;
+}
+
+.center-top{
+  margin-top: 50%;
 }
