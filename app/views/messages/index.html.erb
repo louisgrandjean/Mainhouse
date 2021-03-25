@@ -13,7 +13,7 @@
             				<div class="bg-chat2 rounded py-2 px-3 mb-2">
               				<p class="text-small mb-0 text-white"><%= message.content %></p>
             				</div>
-            				<p class="small text-muted"><%= message.sender %></p>
+            				<p class="small text-muted"><%= message.sender %> <%= message.sender_last %></p>
           					</div>
         					</div>
 							<% else %>
@@ -33,7 +33,7 @@
             				<div class="bg-chat2 rounded py-2 px-3 mb-2">
               				<p class="text-small mb-0 text-white"><%= message.content %></p>
             				</div>
-            				<p class="small text-muted"><%= message.sender %><%= message.sender_last %></p>
+            				<p class="small text-muted"><%= message.sender %> <%= message.sender_last %></p>
           				</div>
         				</div>
 							<% else %>
