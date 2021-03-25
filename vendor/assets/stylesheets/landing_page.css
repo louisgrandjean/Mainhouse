@@ -145,12 +145,12 @@
 }
 
 .bodyt{
-  background-color: rgb(255, 255, 255);center-top
+  background-color: rgb(255, 255, 255);
 }
 
-.dropbtn4 {
+.dropbtn4{
   color: white;
-  background-color: rgb(238, 4, 4) ;
+  background-color: rgb(238, 4, 4);
   position: relative;
   width: 90px;
   border: none;
@@ -183,4 +183,8 @@ display: block;
 
 .center-top{
   margin-top: 50%;
+}
+
+.margin-form{
+  margin-top: 35%;
 }
