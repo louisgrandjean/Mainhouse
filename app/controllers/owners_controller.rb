@@ -22,8 +22,8 @@ class OwnersController < ApplicationController
     def create
 			@owner = Owner.new(owners_params)
 			@owner.password = "bienvenu"
-
       if @owner.save
+        Owner.invite!(owners_params)
         redirect_to agency_building_owners_path(current_agency.id, params[:building_id])
       else 
         render :new
