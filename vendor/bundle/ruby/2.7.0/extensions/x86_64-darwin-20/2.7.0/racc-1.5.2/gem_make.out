@@ -1,0 +1,16 @@
+current directory: /Users/kevinsasso/Desktop/THP/Mainhouse/vendor/bundle/ruby/2.7.0/gems/racc-1.5.2/ext/racc/cparse
+/Users/kevinsasso/.rvm/rubies/ruby-2.7.1/bin/ruby -I /Users/kevinsasso/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0 -r ./siteconf20210325-10812-lpj16n.rb extconf.rb
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: /Users/kevinsasso/Desktop/THP/Mainhouse/vendor/bundle/ruby/2.7.0/gems/racc-1.5.2/ext/racc/cparse
+make "DESTDIR=" clean
+
+current directory: /Users/kevinsasso/Desktop/THP/Mainhouse/vendor/bundle/ruby/2.7.0/gems/racc-1.5.2/ext/racc/cparse
+make "DESTDIR="
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+
+current directory: /Users/kevinsasso/Desktop/THP/Mainhouse/vendor/bundle/ruby/2.7.0/gems/racc-1.5.2/ext/racc/cparse
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 cparse.bundle ./.gem.20210325-10812-1bg8bo9/racc
