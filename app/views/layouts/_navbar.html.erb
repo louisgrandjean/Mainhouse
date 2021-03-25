@@ -30,19 +30,18 @@
           </li>
           <li class="nav-label">Dashboard</li>
             <li>
-              <span> <%= link_to "Immeubles", agency_buildings_path(current_agency.id), class: "nav-text"%> </span> </li>
+              <span> <%= link_to "Mes immeubles", agency_buildings_path(current_agency.id), class: "nav-text"%> </span> </li>
             </li>
           
             <li>
-              <span> <%= link_to "Propriétaires", all_owners_path(current_agency.id), class: "nav-text"%> </span> </li>
+              <span> <%= link_to "Mes propriétaires", all_owners_path(current_agency.id), class: "nav-text"%> </span> </li>
             </li>
           
             <li>
-              <span> <%= link_to "Événements", all_events_path(current_agency.id), class: "nav-text"%> </span> </li>
+              <span> <%= link_to "Mes événements", all_events_path(current_agency.id), class: "nav-text"%> </span> </li>
             </li>
 
-            <li>
-              <span> <%= link_to "Messagerie", class: "nav-text"%> </span> </li>
+            
             </ul>
         </div>
         <div class="nk-nav-scroll  sidebar-footer">
