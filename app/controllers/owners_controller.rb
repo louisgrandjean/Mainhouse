@@ -21,7 +21,7 @@ class OwnersController < ApplicationController
 
     def create
 			@owner = Owner.new(owners_params)
-			@owner.password = "bienvenue"
+			@owner.password = "bienvenu"
 
       if @owner.save
         redirect_to agency_building_owners_path(current_agency.id, params[:building_id])
