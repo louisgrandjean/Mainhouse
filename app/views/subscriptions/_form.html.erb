@@ -2,8 +2,8 @@
 <%= form_tag subscription_path(1), method: :put do %>
 
 
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button w-100"
             data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
             data-description="Votre mois gratuit"
-            data-amount="0"></script><span></span>
+            data-amount="0"></script><span><br /><br />0€ seront débités de votre carte</span>
   <% end %> 
