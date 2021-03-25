@@ -19,8 +19,6 @@ class BuildingsController < ApplicationController
 
     def create
       @building = Building.new(building_params)
-      @building.picture = "https://www.cartefinancement.com/wp-content/uploads/2019/10/vir-1024x682.jpg"
-
       if @building.save
         redirect_to agency_buildings_path
       else 
@@ -53,12 +51,17 @@ class BuildingsController < ApplicationController
         @owner.delete
         @owner = Owner.find_by(building: @building.id)
       end
+      @event = Event.find_by(building_id: @building.id)
+      while @event != nil
+        @event.delete
+        @event = Event.find_by(building_id: @building.id)
+      end
       @building.delete
       redirect_to agency_buildings_path(params[:agency_id])
     end
 
     private
     def building_params
-      params.permit(:agency_id, :name, :adress, :reference, :picture)
+      params.permit(:agency_id, :name, :adress, :reference, :picture, :avatar)
     end
 end

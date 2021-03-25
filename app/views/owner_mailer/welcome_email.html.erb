@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Bonjour <%= @owner.first_name %>, et bienvenue chez vous !</h1>
+    <h3>Votre agence vous a créé un profil sur la plateforme mainHouse.</h3>
+    <p>
+      Vous disposez désormais d'une plateforme connectée qui vous permet de gérer votre bien immobilier en toute sérénité !
+    </p>
+    <p>
+      Vos identifiants sont les suivants :
+    </p> 
+    <p>
+      <strong>Login :</strong><%= @owner.email %>
+      <br />
+      <strong>Mot de passe :</strong>bienvenue
+    </p>
+    <p>
+      Pour accéder à votre espace client, connectez-vous via : <%= link_to 'ce lien', @url %>
+    </p>
+    <p>
+      Nous vous conseillons vivement de changer votre mot de passe dès votre première connexion en cliquant sur le bouton "Editer mon mot de passe".
+    </p>
+    <p> À très vite sur mainHouse.com !
+  </body>
+</html>

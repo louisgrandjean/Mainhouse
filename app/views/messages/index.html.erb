@@ -1,0 +1,75 @@
+	<div class=" overflow-hidden " style=" filter: drop-shadow(0 0 0.15rem grey); margin-right:20%; margin-left: 20%;" >
+  	<div class="col-7 px-0">
+			<div class="text-center">
+				
+			</div>
+      <div class="px-4 py-5 chat-box bg-white  ">
+				<% Message.all.each do |message| %>
+        	<% if message.building_id == params[:building_id].to_i %> 
+						<% if current_agency %>
+      				<% if (current_agency.id != message.agency_id) %>
+        				<div class="media w-50 mb-3"><width="50" class="rounded-circle">
+          				<div class="media-body ml-3">
+            				<div class="bg-chat2 rounded py-2 px-3 mb-2">
+              				<p class="text-small mb-0 text-white"><%= message.content %></p>
+            				</div>
+            				<p class="small text-muted"><%= message.sender %></p>
+          					</div>
+        					</div>
+							<% else %>
+        				<div class="media w-50 ml-auto mb-3" ">
+          				<div class="media-body ">
+            				<div class="bg-chat rounded py-2 px-3 mb-2">
+              				<p class="text-small mb-0 text-white "><%= message.content %></p>
+            				</div>   
+          				</div>
+        				</div>
+							<%	end	%>
+        		<% end %>
+						<% if current_owner %>
+        			<% if (current_owner.id != message.owner_id) %>
+        				<div class="media w-50 mb-3"><width="50" class="rounded-circle">
+          				<div class="media-body ml-3">
+            				<div class="bg-chat2 rounded py-2 px-3 mb-2">
+              				<p class="text-small mb-0 text-white"><%= message.content %></p>
+            				</div>
+            				<p class="small text-muted"><%= message.sender %><%= message.sender_last %></p>
+          				</div>
+        				</div>
+							<% else %>
+        				<div class="media w-50 ml-auto mb-3">
+          				<div class="media-body">
+            				<div class="bg-chat rounded py-2 px-3 mb-2">
+              				<p class="text-small mb-0 text-white"><%= message.content %></p>
+            				</div>
+          				</div>
+        				</div>
+							<% end %>
+        		<% end %>
+					<% end %>
+      	<% end %>
+			</div>
+      
+			<div class="panel-footer">
+                   
+			<%= form_tag agency_building_messages_path, method: "post", class:"bg-light" do %>
+				<div class="input-group">
+				<div class="form-group form-control rounded-0 border-0">
+				
+				<%= text_field_tag('content', nil, class: 'form-group form-control rounded-0 border-0 py-4 top', placeholder: 'Tapez votre message ici') %>
+				</div>
+				<%= submit_tag "Envoyez", class:"btn bt-theme  p-2 shadow rounded-pill" %>
+				
+				<div class="input-group-append">  
+					</span>
+			</div>
+			</div>
+			<% end %>
+</div>
+
+          <div class="input-group-append">	
+          </div>
+        </div>
+   
+  </div>
+</div>

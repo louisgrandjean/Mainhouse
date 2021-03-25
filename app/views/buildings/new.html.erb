@@ -8,7 +8,7 @@
               <div class="card-body pt-5">
                 <a class="text-center" href="index.html"> <h4>Création du batiment</h4></a>
                   <div class="form-group container" style="width: 30rem;">
-                    <%= form_tag agency_buildings_path, method: "post" do %>
+                    <%= form_tag agency_buildings_path, method: "post", multipart: true do %>
                     <div class="form-group">
                     <%= label_tag 'Titre' %>
                     <% text_field_tag 'agency_id', params[:agency_id] %>
@@ -22,10 +22,9 @@
                     <%= label_tag 'Référence' %>
                     <%= text_field_tag 'reference', @building.reference, class: "form-control mb-2" %>
                     </div>
-                    <div class="form-group">
-                    <% label_tag 'Picture' %>
-                    <% text_field_tag 'picture', @building.picture, class: "form-control mb-2" %>
-                    </div>
+                    <br />
+                    <%= file_field_tag :avatar, class: "form-control btn" %>
+                    <br />                    <br />                    <br />
                     <%= submit_tag "Terminer", class: "form-control btn bt-theme" %>
                     <% end %>
                   </div>
