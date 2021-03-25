@@ -150,6 +150,7 @@
     background-color: rgb(255, 255, 255);
 }
 
+
 .dropbtn3 {
     color: white;
     background-color: rgb(43, 238, 4);
@@ -160,14 +161,14 @@
     z-index: 1;
 }
 
-.dropbtn4 {
-    color: white;
-    background-color: rgb(238, 4, 4);
-    position: relative;
-    width: 90px;
-    border: none;
-    cursor: pointer;
-    z-index: 1;
+.dropbtn4{
+  color: white;
+  background-color: rgb(238, 4, 4);
+  position: relative;
+  width: 90px;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
 }
 
 
@@ -198,5 +199,15 @@
 /* Show the dropdown menu on hover */
 
 .dropdown2:hover .dropdown2-content {
-    display: block;
+
+display: block;
+}
+
+.center-top{
+  margin-top: 50%;
+}
+
+.margin-form{
+  margin-top: 150px;
+
 }
