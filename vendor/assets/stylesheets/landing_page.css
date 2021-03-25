@@ -2,7 +2,13 @@
 
 .bt-theme {
     color: #fff;
-    background-color: #3D405B;
+    background-color: #ff9F1C;
+}
+
+.bt-theme2 {
+    color: #fff;
+    background-color: #ff9F1C;
+    opacity: 0.7;
 }
 
 .bg-theme {

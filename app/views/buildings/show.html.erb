@@ -3,7 +3,7 @@
     <%=link_to "Ajouter", new_agency_building_owner_path(current_agency.id, params[:id]), class: "btn mb-1 btn-theme2 mt-2 ", style:"width:100px;"%>
     </div>
 <div>
-<%=link_to "Editer", edit_agency_building_path, class: "btn mb-1 bt-theme mt-1 mr-4", style:"float:right; width:100px;"%>
+<%=link_to "Editer", edit_agency_building_path, class: "btn mb-1 btn-theme2 mt-1 mr-4", style:"float:right; width:100px;"%>
 </div>
 <div>
 <%= link_to "Supprimer", agency_building_path(params[:agency_id], params[:id]), :confirm => "Etes vous sur de supprimer cet immeuble ?", method: :delete, class:"btn mb-1 btn-danger mt-1 mr-4", style:"width:100px;" %>
