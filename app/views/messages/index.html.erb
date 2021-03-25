@@ -6,14 +6,14 @@
       <div class="px-4 py-5 chat-box bg-white  ">
 				<% Message.all.each do |message| %>
         	<% if message.building_id == params[:building_id].to_i %> 
-						<% if current_agency %>
-      				<% if (current_agency.id != message.agency_id) %>
+						<% if agency_signed_in? %>
+      				<% if (current_agency.id != message.agency_id) || (message.owner_id != nil) %>
         				<div class="media w-50 mb-3"><width="50" class="rounded-circle">
           				<div class="media-body ml-3">
             				<div class="bg-chat2 rounded py-2 px-3 mb-2">
               				<p class="text-small mb-0 text-white"><%= message.content %></p>
             				</div>
-            				<p class="small text-muted"><%= message.sender %></p>
+            				<p class="small text-muted"><%= message.sender %> <%= message.sender_last %></p>
           					</div>
         					</div>
 							<% else %>
@@ -26,14 +26,14 @@
         				</div>
 							<%	end	%>
         		<% end %>
-						<% if current_owner %>
-        			<% if (current_owner.id != message.owner_id) %>
+						<% if owner_signed_in? %>
+        			<% if (current_owner.id != message.owner_id)%>
         				<div class="media w-50 mb-3"><width="50" class="rounded-circle">
           				<div class="media-body ml-3">
             				<div class="bg-chat2 rounded py-2 px-3 mb-2">
               				<p class="text-small mb-0 text-white"><%= message.content %></p>
             				</div>
-            				<p class="small text-muted"><%= message.sender %><%= message.sender_last %></p>
+            				<p class="small text-muted"><%= message.sender %> <%= message.sender_last %></p>
           				</div>
         				</div>
 							<% else %>
