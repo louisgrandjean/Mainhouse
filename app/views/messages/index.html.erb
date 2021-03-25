@@ -1,9 +1,9 @@
-	<div class=" overflow-hidden " style=" filter: drop-shadow(0 0 0.15rem grey); margin-right:20%; margin-left: 20%;" >
+	<div class=" overflow-hidden margin-form-nav" style=" filter: drop-shadow(0 0 0.15rem grey); margin-right:1%; margin-left: 37%;" >
   	<div class="col-7 px-0">
 			<div class="text-center">
 				
 			</div>
-      <div class="px-4 py-5 chat-box bg-white  ">
+      <div class="px-4 py-5 chat-box bg-white">
 				<% Message.all.each do |message| %>
         	<% if message.building_id == params[:building_id].to_i %> 
 						<% if agency_signed_in? %>
