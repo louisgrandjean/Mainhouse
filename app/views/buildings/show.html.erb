@@ -3,6 +3,9 @@
     <%=link_to "Ajouter", new_agency_building_owner_path(current_agency.id, params[:id]), class: "btn mb-1 btn-theme2 mt-2 ", style:"width:100px;"%>
     </div>
 <div>
+<%=link_to "Editer", edit_agency_building_path, class: "btn mb-1 bt-theme mt-1 mr-4", style:"float:right; width:100px;"%>
+</div>
+<div>
 <%= link_to "Supprimer", agency_building_path(params[:agency_id], params[:id]), :confirm => "Etes vous sur de supprimer cet immeuble ?", method: :delete, class:"btn mb-1 btn-danger mt-1 mr-4", style:"width:100px;" %>
 </div>
 </div>
@@ -20,13 +23,13 @@
    
    <div class="mt-5" style="float:left;">
    
-    <%=link_to "Afficher les propriétaires", agency_building_owners_path(current_agency.id, params[:id]), class: "btn mb-1 btn-theme2 mt-2 mr-1", style:"width:180px;"%>
+    <%=link_to "Afficher les propriétaires", agency_building_owners_path(current_agency.id, params[:id]), class: "btn mb-1 btn-theme2 mt-2 mr-1", style:"width:2000px;"%>
     
     
-    <%= link_to "Afficher les messages",  agency_building_messages_path(params[:agency_id], params[:id]), method: :get, class:"btn mb-1 btn-theme2 mt-2 mr-1", style:"width:180px;"%>
+    <%= link_to "Afficher les messages",  agency_building_messages_path(params[:agency_id], params[:id]), method: :get, class:"btn mb-1 btn-theme2 mt-2 mr-1", style:"width:200px;"%>
    
     
-    <%= link_to "Afficher les événements",  agency_building_events_path(params[:agency_id], params[:id]), method: :get, class:"btn mb-1 btn-theme2 mt-2", style:"width:180px;"%> 
+    <%= link_to "Afficher les événements",  agency_building_events_path(params[:agency_id], params[:id]), method: :get, class:"btn mb-1 btn-theme2 mt-2", style:"width:200px;"%> 
     
     
     
