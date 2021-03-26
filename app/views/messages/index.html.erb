@@ -1,19 +1,23 @@
-	<div class=" overflow-hidden " style=" filter: drop-shadow(0 0 0.15rem grey); margin-right:20%; margin-left: 20%;" >
+	<div class=" overflow-hidden margin-form-nav" style=" filter: drop-shadow(0 0 0.15rem grey); margin-right:1%; margin-left: 37%;" >
   	<div class="col-7 px-0">
 			<div class="text-center">
 				
 			</div>
-      <div class="px-4 py-5 chat-box bg-white  ">
+      <div class="px-4 py-5 chat-box bg-white">
 				<% Message.all.each do |message| %>
         	<% if message.building_id == params[:building_id].to_i %> 
-						<% if current_agency %>
-      				<% if (current_agency.id != message.agency_id) %>
+						<% if agency_signed_in? %>
+      				<% if (current_agency.id != message.agency_id) || (message.owner_id != nil) %>
         				<div class="media w-50 mb-3"><width="50" class="rounded-circle">
           				<div class="media-body ml-3">
             				<div class="bg-chat2 rounded py-2 px-3 mb-2">
               				<p class="text-small mb-0 text-white"><%= message.content %></p>
             				</div>
-            				<p class="small text-muted"><%= message.sender %></p>
+							<% if message.owner_id != nil %>
+            					<p class="small text-muted"><%= message.sender %> <%= message.sender_last %></p>
+							<% else %>
+								<p class="small text-muted"><%= message.sender %></p>
+							<% end%>
           					</div>
         					</div>
 							<% else %>
@@ -26,14 +30,18 @@
         				</div>
 							<%	end	%>
         		<% end %>
-						<% if current_owner %>
-        			<% if (current_owner.id != message.owner_id) %>
+						<% if owner_signed_in? %>
+        			<% if (current_owner.id != message.owner_id)%>
         				<div class="media w-50 mb-3"><width="50" class="rounded-circle">
           				<div class="media-body ml-3">
             				<div class="bg-chat2 rounded py-2 px-3 mb-2">
               				<p class="text-small mb-0 text-white"><%= message.content %></p>
             				</div>
-            				<p class="small text-muted"><%= message.sender %><%= message.sender_last %></p>
+							<% if message.owner_id != nil %>
+								<p class="small text-muted"><%= message.sender %> <%= message.sender_last %></p>
+							<% else %>
+								<p class="small text-muted"><%= message.sender %></p>
+							<% end%>
           				</div>
         				</div>
 							<% else %>

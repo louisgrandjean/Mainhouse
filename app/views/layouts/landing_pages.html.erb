@@ -19,8 +19,8 @@
 			<div class="dropdown">
   			<button class="dropbtn ">Se connecter</button>
   			<div class="dropdown-content">
-					<%= link_to "Agence",  new_agency_session_path, class:"btn p-2"%>
-					<%= link_to "Propriétaire",  new_owner_session_path, class:"btn p-2"%>
+					<%= link_to "Agence",  new_agency_session_path, class:"btn p-2 mt-2"%>
+					<%= link_to "Propriétaire",  new_owner_session_path, class:"btn p-2 mt-2"%>
   			</div>
 			</div>
 		</div>
@@ -31,9 +31,12 @@
     <div class="row align-items-center">
       <div class="col-md-5">
         <div class="welcome-text-area">
-          <h1  style="visibility: visible;">La plateforme Saas dédiée à la gestion des copropriétés</h1>
-          <p  class="mt-3" style="visibility: visible;">MainMouse est le premier service dédié aux agences et aux propriétaires pour gérer et faire vivre leurs copropriétés. Messagerie personnalisée, gestion d'événements, nous avons pensé à tout !</p>
+          <h1  style="visibility: visible;">Gérer sa copropriété n'a jamais été aussi simple.</h1>
+          <p  class="mt-3" style="visibility: visible; color:black;">MainHouse est le premier service dédié aux agences et aux propriétaires pour gérer et faire vivre leurs copropriétés. <br />Messagerie personnalisée, gestion d'événements, nous avons pensé à tout !</p>
 					<h5 style="visibility: visible;">Vous êtes une agence ? Découvrez notre offre ci-dessous :</h5>
+						<section style="margin-top: 20%; margin-left: 25%;">
+							<%= button_to "Inscrivez- vous !", new_agency_registration_path, method: :get, class:"btn bt1-lp bt-landing mb-5", style:"border-radius: 40px; font-size: 17px; height:50px; width:170px;"%>
+						</section>
         </div>
       </div>
         <div class="col-md-7">
@@ -56,34 +59,95 @@
   <div class="container py-5">
     <div class="row text-center align-items-end">
       <div class="col-lg-4 mb-5 mb-lg-0">
-      	<div class="" style="width: 18rem;">
+      	<div class="" style="width: 19rem;">
       		<%= image_tag("landing/immeuble.png", class:"card-img-top rounded-circle pimg border-theme", alt:"Card image cap")%>
       		<div class="card-body">
-        		<p class="card-text">Gérez les copropriétés de tous vos immeubles sur une seule plateforme</p>
+        		<p class="card-text" style="color:black;">Gérez les copropriétés de tous vos immeubles sur une seule plateforme</p>
+        		<p class="card-text"  style="color:black;">Pour en savoir plus... <%=link_to "cliquez ici !", new_agency_registration_path%></p>						
       		</div>
       	</div>
       </div>
       <div class="col-lg-4 mb-5 mb-lg-0">
-      	<div class="" style="width: 18rem;">
+      	<div class="" style="width: 19rem;">
       		<%= image_tag("landing/humains.png", class:"card-img-top rounded-circle pimg border-theme", alt:"Card image cap")%>
       		<div class="card-body">
-        		<p class="card-text">Faites vivre votre copropriété grâce à une messagerie dédiée à chaque immeuble</p>
+        		<p class="card-text"  style="color:black;">Faites vivre votre copropriété grâce à une messagerie dédiée à chaque immeuble</p>
+	        	<p class="card-text"  style="color:black;">Pour en savoir plus... <%=link_to "cliquez ici !", new_agency_registration_path%></p>
       		</div>
       	</div>
       </div>
       <div class="col-lg-4">
-      	<div class="" style="width: 18rem;">
+      	<div class="" style="width: 19rem;">
       		<%= image_tag("landing/evenement.png", class:"card-img-top rounded-circle pimg border-theme", alt:"Card image cap")%>
       		<div class="card-body">
-        		<p class="card-text">Retrouvez tous les événements liés à vos copropriétés au même endroit</p>
+        		<p class="card-text"  style="color:black;">Retrouvez tous les événements liés à vos copropriétés au même endroit</p>
+						<p class="card-text"  style="color:black;">Pour en savoir plus... <%=link_to "cliquez ici !", new_agency_registration_path%></p>
       		</div>
       	</div>
       </div>
     </div>
   </div>
 </section>
+<hr class="mt-5 mb-5 mx-auto" style="width: 50%;">
+<section style="margin: 0 auto; width: 1000px; margin-top: 10%;">
+<div class="col-12 m-b-30">
+	<div class="row">
+		<div class="col-md-6 col-lg-3">
+			<div class="card" style="width:240px;">
+				<div class="card-body">
+					<h5 class="card-title">Jean_</h5>
+					<p class="card-text">"Depuis que j'utilise mainHouse, je peux dialoguer en direct avec mon agences en quelques secondes ! Fini les post-its dans l'ascenceur, ou les emails sans réponse ! Un vrai plaisir"</p>
+					</p>
+				</div>
+					<img class="img-fluid" src="https://wl-sympa.cf.tsp.li/resize/728x/jpg/66e/c9f/a8ce1d50149e61a71d45a875d5.jpg" alt="">					
+
+			</div>
+		</div>
+		<!-- End Col -->
+		<div class="col-md-6 col-lg-3">
+			<div class="card" style="width:240px;">
+			<img class="img-fluid" src="https://images.forwardcdn.com/image/720x/center/images/cropped/istock-627909282-1514234385.jpg" alt="">
+				<div class="card-body">
+					<h5 class="card-title">Sophie_</h5>
+					<p class="card-text">"Depuis que notre agence a opté pour la solution mainHouse, la mise en place d'assemblée générales se fait sans encombres. C'est un outil très simple d'utilisation, et qui devient vite indispensable"</p>
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- End Col -->
+		<div class="col-md-6 col-lg-3">
+			<div class="card" style="width:240px;">
+				<div class="card-body">
+					<h5 class="card-title">Frederic_</h5>
+					<p class="card-text">"L'ascenceur de notre immeuble était en panne, et j'ai pu m'adresser directement à mon agence qui a réglé le problème en quelques heures ! Merci mainHouse!"</p>
+					</p>
+				</div>
+				<img class="img-fluid" src="https://www.moipourtoi.com/dating/luciano106.jpg" alt="">
+			</div>
+		</div>
+
+		<div class="col-md-6 col-lg-3">
+			<div class="card" style="width:240px;">
+				<img class="img-fluid" src="https://www.toutelatele.com/IMG/arton63184.jpg" alt="">
+				<div class="card-body">
+					<h5 class="card-title">Martine_</h5>
+					<p class="card-text">"Aujourd'hui, nous gérons l'ensemble de nos propriétés en quelques clics, ajoutant de nouveaux propriétaires, éditant des événements... MainHouse nous permet d'être plus efficaces et plus transparents avec nos clients"</p>
+					
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+<section style="margin: 0 auto; width: 1000px; text-align:center;">
+<h3 class="mt-5">Ils nous ont fait confiance... <%= button_to "Rejoignez-les !", new_agency_registration_path, method: :get, class:"btn bt1-lp  bt-landing mt-4 mb-5", style:"border-radius: 40px; font-size: 17px; height:50px; width:170px;"%>
+</h3>
+</section>
 
 <hr class="mt-5 mb-5 mx-auto" style="width: 50%;">
+							
+		
 
 <section>
 	<div class="container py-5">
@@ -105,7 +169,7 @@
 							<li class="mb-3">	
             		<i class="fa fa-check mr-2 text-primary"></i> Calendrier par immeuble et mutualisé </li>
         	</ul>
-        	<a href="#" class="btn bt-theme btn-block p-2 shadow rounded-pill" style="background-color: #ff9F1C;">Inscrivez-vous</a>
+						<%= button_to "Découvrez l'offre", new_agency_registration_path, method: :get, class:"btn bt-theme btn-block p-2 shadow rounded-pill", style:"background-color: #ff9F1C;"%>
       	</div>
     	</div>
     	<div class="col-lg-4 mb-5 mb-lg-3">
@@ -125,7 +189,7 @@
           		<li class="mb-3">
             		<i class="fa fa-check mr-2 text-primary"></i> Calendrier par immeuble et mutualisé </li>
         		</ul>
-        		<a href="#" class="btn bt-theme btn-block p-2 shadow rounded-pill" style="background-color: #ff9F1C;">Inscrivez-vous</a>
+						<%= button_to "Découvrez l'offre", new_agency_registration_path, method: :get, class:"btn bt-theme btn-block p-2 shadow rounded-pill", style:"background-color: #ff9F1C;"%>
       		</div>
     		</div>
     			<div class="col-lg-4 mb-lg-3">
@@ -145,7 +209,7 @@
           		<li class="mb-3">
             		<i class="fa fa-check mr-2 text-primary"></i> Calendrier par immeuble et mutualisé </li>
         				</ul>
-        				<a href="#" class="btn bt-theme btn-block p-2 shadow rounded-pill" style="background-color: #ff9F1C;">Inscrivez-vous</a>
+									<p>Interessé ? Contactez nous <a href="mailto: louis.grandjean99@gmail.com" style="text-decoration:underline;">ici</a></p>
       				</div>
     				</div>
   				</div>
@@ -154,9 +218,11 @@
 		</div>
 	</div>
 </section>
-
-<%= button_to "Rejoignez-nous !", new_agency_registration_path, method: :get, class:"btn btn-block bt1-lp p-5 bt-landing mt-5", style:"border-radius: 0px; font-size: 50px;"%>
-<a href="#" class="btn bt-theme btn-block p-3 shadow rounded-pill "></a>
+<hr>
+<section style="width:300px; margin: 0 auto; width: 100%; text-align:center; background-color: #ff9F1C;">
+<%= button_to "Inscrivez-vous ici ", new_agency_registration_path, method: :get, class:"btn bt1-lp  bt-landing mt-5 mb-5", style:"border-radius: 40px; font-size: 17px; height:50px; width:180px;"%>
+</section>
+<hr>
   <div class="wrap text-center">
 	<p class="mt-3">Contactez l'équipe mainhouse pour un plan personnalisé au 07.66.38.94.57</p>
 	</div>
