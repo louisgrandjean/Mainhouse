@@ -21,7 +21,7 @@
     
       <% if agency_signed_in? || owner_signed_in?%>  
         <% flash.each do |key, value| %>
-          <div class="alert alert-info ml-3 float-left" style="width: 200%"><%= value %></div>
+          <div class="alert alert-info" style="width: 120%"><%= value %></div>
         <% end %>
       <% end %>
       
