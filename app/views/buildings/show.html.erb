@@ -1,9 +1,9 @@
 
 <div class="margin-form-nav" style="width: 40%; margin-right:auto; margin-left: auto;">
 <%if @building.avatar.attached?%>
-  <%= image_tag @building.avatar, alt: 'avatar', class: "card-img-top", style="border-radius:50%; height:200px; width:200px; float:left;" %>
+  <%= image_tag @building.avatar, alt: 'avatar', class: "card-img-top", style: "border-radius:50%;  height:200px; width:200px; float:left;" %>
 <%else%>
-  <img class="card-img-top mr-3" src="<%=@building.picture%>" alt="Card image cap", style="border-radius:50%; height:200px; width:200px; float:left;">
+  <img class="card-img-top mr-3" src="<%=@building.picture%>" alt="Card image cap" style="border-radius:50%;  height:200px; width:200px; float:left;">
 <%end%>
   <div class="card-body"  style="margin-left: 50%;">
     <h3> <%= @building.name %></h3>
