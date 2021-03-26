@@ -21,7 +21,8 @@ class SubscriptionsController < ApplicationController
     current_agency.save
 
 
-    redirect_to agency_buildings_path(current_agency), notice: "Your subscription was set up successfully! Happy learning!"
+    redirect_to agency_buildings_path(current_agency)
+    flash[:notice] = "Votre inscription a bien été prise en compte. Bienvenu dans ce mois d'essai gratuit !"
 
   end
   

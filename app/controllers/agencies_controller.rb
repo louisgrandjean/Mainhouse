@@ -16,6 +16,7 @@ def update
   @agency = Agency.find_by(id: current_agency)
   @agency.update(agency_params)
   redirect_to agency_path(params[:id])
+  flash[:notice] = "La mise a jour a bien eu lieu."
 end
 
 def destroy
@@ -37,6 +38,7 @@ def destroy
   end
   @agency.delete
   redirect_to root_path
+  flash[:notice] = "La suppression a jour a bien eu lieu."
 end
 
 private
