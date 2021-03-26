@@ -1,8 +1,4 @@
-	<div class=" overflow-hidden margin-form-nav" style=" filter: drop-shadow(0 0 0.15rem grey); margin-right:1%; margin-left: 37%;" >
-  	<div class="col-7 px-0">
-			<div class="text-center">
-				
-			</div>
+	<div class=" overflow-hidden margin-form-nav" style=" filter: drop-shadow(0 0 0.15rem grey); margin-right:4%; margin-left: 22%;" >
       <div class="px-4 py-5 chat-box bg-white">
 				<% Message.all.each do |message| %>
         	<% if message.building_id == params[:building_id].to_i %> 
@@ -70,14 +66,9 @@
 				
 				<div class="input-group-append">  
 					</span>
+				</div>
 			</div>
-			</div>
-			<% end %>
-</div>
-
-          <div class="input-group-append">	
-          </div>
-        </div>
-   
-  </div>
+		<% end %>
+	</div>
+	</div>
 </div>
