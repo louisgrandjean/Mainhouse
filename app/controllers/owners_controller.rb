@@ -25,9 +25,9 @@ class OwnersController < ApplicationController
 
       if @owner.save
         redirect_to agency_building_owners_path(current_agency.id, params[:building_id])
-        flash[:success] = "Un nouveau propriétaire a été créé"
+        flash[:notice] = "Un nouveau propriétaire a été créé."
       else 
-        flash[:warning] = "Le propriétaire n'a pas été créé. Vérifiez que l'adresse email n'existe pas déjà"
+        flash[:notice] = "Le propriétaire n'a pas été créé. Vérifiez que l'adresse email n'existe pas déjà."
         render :new
       end
 
@@ -45,9 +45,9 @@ class OwnersController < ApplicationController
       @owner = Owner.find_by(building_id: params[:building_id], id: params[:id])
       if @owner.update(owners_params)
 				redirect_to agency_building_owner_path(params[:agency_id], params[:building_id], params[:id])
-        flash[:success] = "La mise a jour a bien eu lieu"
+        flash[:notice] = "La mise a jour a bien eu lieu."
       else
-        flash[:warning] = "La mise à jour n'a pas eu lieu. Une erreur semble s'être glissée dans le formulaire"
+        flash[:notice] = "La mise à jour n'a pas eu lieu. Une erreur semble s'être glissée dans le formulaire."
         render :edit
       end
     end
@@ -59,7 +59,7 @@ class OwnersController < ApplicationController
 				render :owners
 			else 
 				redirect_to all_owners_path(current_agency.id)
-        flash[:warning] = "Cette page n'est pas disponible"
+        flash[:notice] = "Cette page n'est pas disponible."
       end	
 		end
 
@@ -67,7 +67,7 @@ class OwnersController < ApplicationController
       @owner = Owner.find_by(building_id: params[:building_id], id: params[:id])
       @owner.delete
       redirect_to agency_building_owners_path(params[:agency_id], params[:building_id])
-      flash[:success] = "Le propriétaire a bien été supprimé"
+      flash[:notice] = "Le propriétaire a bien été supprimé."
     end
 
 		private

@@ -21,8 +21,10 @@ class BuildingsController < ApplicationController
       @building = Building.new(building_params)
       if @building.save
         redirect_to agency_buildings_path
+        flash[:notice] = "Le bâtiment a bien été créé."
       else 
         render :new
+        flash[:notice] = "Le bâtiment n'a pas été créé."
       end
     end
 
@@ -31,6 +33,7 @@ class BuildingsController < ApplicationController
       @building = Building.find_by(agency_id: current_agency, id: params[:id])
       if @building.nil?
         redirect_to agency_buildings_path
+        flash[:notice] = "Ce bâtiment n'existe pas."
     end
     end
 
@@ -38,8 +41,11 @@ class BuildingsController < ApplicationController
       @building = Building.find_by(agency_id: current_agency, id: params[:id])
       if @building.update(building_params)
       redirect_to agency_building_path
+      flash[:notice] = "Le bâtiment a été mis à jour."
       else
       render :edit
+      flash[:notice] = "Le bâtiment n'a pas été mis à jour."
+
       end
     end
 
@@ -58,6 +64,7 @@ class BuildingsController < ApplicationController
       end
       @building.delete
       redirect_to agency_buildings_path(params[:agency_id])
+      flash[:notice] = "Le bâtiment et ses propriétaires ont bien été supprimés."
     end
 
     private

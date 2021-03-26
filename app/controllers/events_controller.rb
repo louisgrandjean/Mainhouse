@@ -12,8 +12,10 @@ class EventsController < ApplicationController
     @event = Event.new(event_params) 
     if @event.save
       redirect_to agency_building_events_path(params[:agency_id], params[:building_id], params[:id])
+			flash[:notice] = "L'événement a bien été créé."
     else 
       render :new
+			flash[:notice] = "L'événement n'a pas été créé."
 		end
   end
 
@@ -25,8 +27,10 @@ class EventsController < ApplicationController
 		@event = Event.find_by(building_id: params[:building_id], id: params[:id])
 		if @event.update(event_params)
 			redirect_to agency_building_events_path(params[:agency_id], params[:building_id], params[:id])
+			flash[:notice] = "L'événement a bien été mis à jour."
 		else
 		render :edit
+		flash[:notice] = "L'événement n'a pas été mis à jour."
 		end
 	end
 
@@ -34,6 +38,7 @@ class EventsController < ApplicationController
 		@event = Event.find_by(building_id: params[:building_id], id: params[:id])
 		@event.delete
 		redirect_to agency_building_events_path(params[:agency_id], params[:building_id], params[:id])
+		flash[:notice] = "L'événement a bien été supprimé."
 	end
 
 	def events
@@ -43,6 +48,7 @@ class EventsController < ApplicationController
 			render :events
 		else 
 			redirect_to all_events_path(current_agency.id)
+			flash[:notice] = "Cet événement n'existe pas."
 		end
 	end
 
