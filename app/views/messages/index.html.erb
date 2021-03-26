@@ -1,8 +1,4 @@
-	<div class=" overflow-hidden margin-form-nav" style=" filter: drop-shadow(0 0 0.15rem grey); margin-right:1%; margin-left: 37%;" >
-  	<div class="col-7 px-0">
-			<div class="text-center">
-				
-			</div>
+	<div class=" overflow-hidden margin-form-nav" style=" filter: drop-shadow(0 0 0.15rem grey); margin-right:4%; margin-left: 22%;" >
       <div class="px-4 py-5 chat-box bg-white">
 				<% Message.all.each do |message| %>
         	<% if message.building_id == params[:building_id].to_i %> 
@@ -11,7 +7,7 @@
         				<div class="media w-50 mb-3"><width="50" class="rounded-circle">
           				<div class="media-body ml-3">
             				<div class="bg-chat2 rounded py-2 px-3 mb-2">
-              				<p class="text-small mb-0 text-white"><%= message.content %></p>
+              				<p class="text-small mb-0 text-white text-chat-mess"><%= message.content %></p>
             				</div>
 							<% if message.owner_id != nil %>
             					<p class="small text-muted"><%= message.sender %> <%= message.sender_last %></p>
@@ -24,7 +20,7 @@
         				<div class="media w-50 ml-auto mb-3" ">
           				<div class="media-body ">
             				<div class="bg-chat rounded py-2 px-3 mb-2">
-              				<p class="text-small mb-0 text-white "><%= message.content %></p>
+              				<p class="text-small mb-0 text-white text-chat-mess"><%= message.content %></p>
             				</div>   
           				</div>
         				</div>
@@ -35,7 +31,7 @@
         				<div class="media w-50 mb-3"><width="50" class="rounded-circle">
           				<div class="media-body ml-3">
             				<div class="bg-chat2 rounded py-2 px-3 mb-2">
-              				<p class="text-small mb-0 text-white"><%= message.content %></p>
+              				<p class="text-small mb-0 text-white text-chat-mess"><%= message.content %></p>
             				</div>
 							<% if message.owner_id != nil %>
 								<p class="small text-muted"><%= message.sender %> <%= message.sender_last %></p>
@@ -48,7 +44,7 @@
         				<div class="media w-50 ml-auto mb-3">
           				<div class="media-body">
             				<div class="bg-chat rounded py-2 px-3 mb-2">
-              				<p class="text-small mb-0 text-white"><%= message.content %></p>
+              				<p class="text-small mb-0 text-white text-chat-mess"><%= message.content %></p>
             				</div>
           				</div>
         				</div>
@@ -70,14 +66,9 @@
 				
 				<div class="input-group-append">  
 					</span>
+				</div>
 			</div>
-			</div>
-			<% end %>
-</div>
-
-          <div class="input-group-append">	
-          </div>
-        </div>
-   
-  </div>
+		<% end %>
+	</div>
+	</div>
 </div>
