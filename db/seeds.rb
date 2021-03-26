@@ -17,7 +17,7 @@ end
 
 
 
-3.times do |i|
+5.times do |i|
   Building.create(name: "Building 1", agency_id: i, adress: "01 rue de la République", reference: Faker::Number.hexadecimal(digits: 6), picture: "https://www.fibra-award.org/wp-content/uploads/2018/11/31-Rue-Myrha-825x510.jpg")
   Building.create(name: "Building 2", agency_id: i, adress: "02 rue de la République", reference: Faker::Number.hexadecimal(digits: 6), picture: "https://www.fournisseur-energie.com/blog/wp-content/uploads/2020/05/ravalement-fa%C3%A7ade-immeuble-825x510.jpg")
   Building.create(name: "Building 3", agency_id: i, adress: "03 rue de la République", reference: Faker::Number.hexadecimal(digits: 6), picture: "https://fr-architectes.com/wp-content/uploads/2020/03/P-01-vaucanson-825x510.jpg")
