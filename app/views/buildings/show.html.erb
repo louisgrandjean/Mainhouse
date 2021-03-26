@@ -13,7 +13,7 @@
 <%if @building.avatar.attached?%>
   <%= image_tag @building.avatar, alt: 'avatar', class: "card-img-top", style: "border-radius:50%; height:70px; width:70px;" %>
 <%else%>
-  <img class="card-img-top mr-3" src="https://www.cartefinancement.com/wp-content/uploads/2019/10/vir-1024x682.jpg" alt="Card image cap" style="border-radius:50%; height:70px; width:70px; float:left;">
+  <img class="card-img-top mr-3" src="<%=@building.picture%>" alt="Card image cap" style="border-radius:50%; height:70px; width:70px; float:left;">
 <%end%>
   <div class="card-body">
     <h5 class="card-title mb-5 ml-3" style=""><%= @building.name %></h5>
