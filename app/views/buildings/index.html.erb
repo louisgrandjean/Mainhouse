@@ -12,7 +12,7 @@
         <div class="col-md-4">
           <div class="card text-center ml-5" style="width: 18rem;">
             <%if building.avatar.attached?%>
-  <%= image_tag building.avatar, alt: 'avatar', class: "card-img-top" %>
+  <%= image_tag building.avatar.variant(resize: "300x200"), alt: 'avatar', class: "card-img-top" %>
 <%else%>
    <img class="card-img-top" src="https://www.cartefinancement.com/wp-content/uploads/2019/10/vir-1024x682.jpg" alt="Card image cap">
 <%end%>

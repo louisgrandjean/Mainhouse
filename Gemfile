@@ -70,3 +70,4 @@ gem 'stripe'
 
 gem "letter_opener", :group => :development
 gem "aws-sdk-s3", require: false 
+gem 'image_processing', '1.2'
