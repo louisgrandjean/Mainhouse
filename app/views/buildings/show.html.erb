@@ -1,48 +1,51 @@
-<div style="float:right;">
-<div>
-    <%=link_to "Ajouter", new_agency_building_owner_path(current_agency.id, params[:id]), class: "btn mb-1 btn-theme2 mt-2 ", style:"width:100px;"%>
-    </div>
-<div>
-<%=link_to "Editer", edit_agency_building_path, class: "btn mb-1 btn-theme2 mt-1 mr-4", style:"float:right; width:100px;"%>
-</div>
-<div>
-<%= link_to "Supprimer", agency_building_path(params[:agency_id], params[:id]), :confirm => "Etes vous sur de supprimer cet immeuble ?", method: :delete, class:"btn mb-1 btn-danger mt-1 mr-4", style:"width:100px;" %>
-</div>
-</div>
-<div class="" style="width: 40rem; margin-right:auto; margin-left: auto;">
+
+<div class="margin-form-nav" style="width: 40%; margin-right:auto; margin-left: auto;">
 <%if @building.avatar.attached?%>
   <%= image_tag @building.avatar, alt: 'avatar', class: "card-img-top", style: "border-radius:50%; height:70px; width:70px;" %>
 <%else%>
-  <img class="card-img-top mr-3" src="https://www.cartefinancement.com/wp-content/uploads/2019/10/vir-1024x682.jpg" alt="Card image cap" style="border-radius:50%; height:70px; width:70px; float:left;">
+  <img class="" mr-3" src="https://www.cartefinancement.com/wp-content/uploads/2019/10/vir-1024x682.jpg" alt="Card image cap" style="border-radius:50%; height:200px; width:200px; float:left;">
 <%end%>
-  <div class="card-body">
-    <h5 class="card-title mb-5 ml-3" style=""><%= @building.name %></h5>
+  <div class="card-body"  style="margin-left: 50%;">
+    <h3> <%= @building.name %></h3>
     <p class="card-text">Adresse: <%=@building.adress%></p>
     <p class="card-text">Référence: <%= @building.reference %></p>
     <p class="card-text">Crée le: <%= @building.created_at %></p>
-   
-   <div class="mt-5" style="float:left;">
-   
-    <%=link_to "Afficher les propriétaires", agency_building_owners_path(current_agency.id, params[:id]), class: "btn mb-1 btn-theme2 mt-2 mr-1", style:"width:200px;"%>
-    
-    
-    <%= link_to "Afficher les messages",  agency_building_messages_path(params[:agency_id], params[:id]), method: :get, class:"btn mb-1 btn-theme2 mt-2 mr-1", style:"width:200px;"%>
-   
-    
-    <%= link_to "Afficher les événements",  agency_building_events_path(params[:agency_id], params[:id]), method: :get, class:"btn mb-1 btn-theme2 mt-2", style:"width:200px;"%> 
-    
-    
-    
-   
   </div>
-
-  
 </div>
 
-
-
-
-
-
-
-
+<section>
+  <div class="container py-5"style="margin-right:25%; margin-left: 25%; margin-top: 5%;">
+    <div class="row text-center align-items-end">
+      <div class="col-lg-4 mb-5 mb-lg-0">
+        <div class="card border-primary mb-3" style="max-width: 15rem;">
+          <div class="card-body text-primary text-center">
+            <h5 class="card-title">Mon immeuble</h5>
+            <%=link_to "Modifier", edit_agency_building_path, class: "btn mb-1 btn-theme2 mt-2 ", style:"width:120px;"%>
+            <%=link_to "Supprimer", agency_building_path(params[:agency_id], params[:id]), method: :delete,  class: "btn mb-1 btn-danger mt-2 ", style:"width:120px;"%>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-5 mb-lg-0">
+        <div class="card border-primary mb-3" style="max-width: 15rem;">
+          <div class="card-body text-primary text-center">
+            <h5 class="card-title">Mes propriétaires</h5>
+            <%=link_to "Afficher", agency_building_owners_path(current_agency.id, params[:id]), class: "btn mb-1 btn-theme2 mt-2 mr-1", style:"width:120px;"%>
+            <%=link_to "Ajouter", new_agency_building_owner_path(current_agency.id, params[:id]), class: "btn mb-1 btn-theme2 mt-2 ", style:"width:120px;"%>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-lg-0">
+        <div class="card border-primary mb-3" style="max-width: 15rem;">
+          <div class="card-body text-primary text-center">
+            <h5 class="card-title">Espace social</h5>
+            <%= link_to "Messagerie",  agency_building_messages_path(params[:agency_id], params[:id]), method: :get, class:"btn mb-1 btn-theme2 mt-2 mr-1", style:"width:120px;"%>
+            <%= link_to "Evénements",  agency_building_events_path(params[:agency_id], params[:id]), method: :get, class:"btn mb-1 btn-theme2 mt-2", style:"width:120px;"%> 
+          </div>
+        </div>
+      </div>
+    </div>
+      
+      </div>
+    </div>
+  </div>
+</section>
