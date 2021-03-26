@@ -10,6 +10,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 <body class="bodyt">
+<%= image_tag("logo/black_logo.png", class:"card-img-top float-left mt-4 ml-5", alt:"Card image cap", style: "width: 15%;")%>
 <section>
 	<div class="container py-4">
 		<div class="float-right">
@@ -220,7 +221,8 @@
 </section>
 <hr>
 <section style="width:300px; margin: 0 auto; width: 100%; text-align:center; background-color: #ff9F1C;">
-<%= button_to "Inscrivez-vous ici ", new_agency_registration_path, method: :get, class:"btn bt1-lp  bt-landing mt-5 mb-5", style:"border-radius: 40px; font-size: 17px; height:50px; width:180px;"%>
+<%= button_to "Pour vivre la copropriété autrement...", new_agency_registration_path, method: :get, class:"btn bt1-lp bt-theme mt-1", style:"border-radius: 40px; font-size: 17px; height:50px; width:400px; background-color: #ff9F1C;"%>
+<%= button_to "Inscrivez-vous ici ", new_agency_registration_path, method: :get, class:"btn bt1-lp  bt-landing mb-5", style:"border-radius: 40px; font-size: 17px; height:50px; width:180px;"%>
 </section>
 <hr>
   <div class="wrap text-center">
