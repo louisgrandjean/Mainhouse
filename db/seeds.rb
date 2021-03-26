@@ -12,7 +12,7 @@ Owner.destroy_all
 Event.destroy_all
 
 5.times do |i|
-Agency.create(email: "test#{i + 1}@test.com", password: "testtest", name: "agence#{i + 1}", city: "Lyon", adress: "0#{i + 1} rue de la Location", phone_number: "06.42.24.42.2#{i + 1}", siren: Faker::Number.number(digits: 9))
+Agency.create(email: "test#{i + 1}@test.com", password: "testtest", name: "agence#{i + 1}", city: "Lyon", adress: "0#{i + 1} rue de la Location", phone_number: "064224422#{i + 1}", siren: Faker::Number.number(digits: 9))
 end
 
 
@@ -30,10 +30,10 @@ end
 end
 
 3.times do |i|
-  Owner.create(building_id: 1, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, phone_number: "07.42.24.42.2#{i + 1}", email: "owner_test#{i + 1}@gmail.com", password: "testtest", lot: "#{i + 1}")
-  Owner.create(building_id: 3, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, phone_number: "07.42.24.42.2#{i + 2}", email: "owner_test#{i + 2}@gmail.com", password: "testtest", lot: "#{i + 2}")
-  Owner.create(building_id: 6, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, phone_number: "07.42.24.42.2#{i + 3}", email: "owner_test#{i + 3}@gmail.com", password: "testtest", lot: "#{i + 3}")
-  Owner.create(building_id: 9, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, phone_number: "07.42.24.42.2#{i + 4}", email: "owner_test#{i + 4}@gmail.com", password: "testtest", lot: "#{i + 4}")
+  Owner.create(building_id: 1, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, phone_number: "074224422#{i + 1}", email: "owner_test#{i + 1}@gmail.com", password: "testtest", lot: "#{i + 1}")
+  Owner.create(building_id: 3, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, phone_number: "074224422#{i + 2}", email: "owner_test#{i + 2}@gmail.com", password: "testtest", lot: "#{i + 2}")
+  Owner.create(building_id: 6, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, phone_number: "074224422#{i + 3}", email: "owner_test#{i + 3}@gmail.com", password: "testtest", lot: "#{i + 3}")
+  Owner.create(building_id: 9, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, phone_number: "074224422#{i + 4}", email: "owner_test#{i + 4}@gmail.com", password: "testtest", lot: "#{i + 4}")
 end
 
 
