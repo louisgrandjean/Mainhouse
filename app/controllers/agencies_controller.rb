@@ -14,9 +14,13 @@ end
 
 def update
   @agency = Agency.find_by(id: current_agency)
-  @agency.update(agency_params)
+  if @agency.update(agency_params)
   redirect_to agency_path(params[:id])
   flash[:notice] = "La mise a jour a bien eu lieu."
+  else
+  render :edit
+  flash[:notice] = "La mise à jour n'a pas eu lieu."
+  end
 end
 
 def destroy
