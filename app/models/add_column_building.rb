@@ -1,0 +1,2 @@
+class AddColumnBuilding < ApplicationRecord
+end
