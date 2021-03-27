@@ -25,7 +25,7 @@ class OwnersController < ApplicationController
 
       if @owner.save
         redirect_to agency_building_owners_path(current_agency.id, params[:building_id])
-        flash[:notice] = "Un nouveau propriétaire a été créé."
+        flash[:notice] = "Un nouveau propriétaire a été créé. Un email lui a automatiquement été envoyé à l'adresse renseignée."
       else 
         flash[:notice] = "Le propriétaire n'a pas été créé. Vérifiez que l'adresse email n'existe pas déjà."
         render :new

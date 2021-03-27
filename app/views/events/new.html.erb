@@ -13,6 +13,7 @@
                     <% text_field_tag 'building_id', params[:building_id] %>
                     <div class="form-group">
                       <%= label_tag "Début de l'événement" %>
+                      <p><small>Format : JJ-MM-AAAA  hh:mm:ss</small></p>
                       <div class="form-group">
                           <input type="datetime-local" id="meeting-time"
                           name="datetime" value=""

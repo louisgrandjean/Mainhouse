@@ -4,7 +4,7 @@
       <div class="row justify-content-center h-100">
         <div class="col-xl-6">
           <div class="form-input-content">
-            <div class="card login-form mb-0 margin-form-nav">
+            <div class="card login-form mb-0">
               <div class="card-body pt-5">
                 <a class="text-center" href="index.html"> <h4>Création du batiment</h4></a>
                   <div class="form-group container" style="width: 30rem;">
@@ -16,15 +16,26 @@
                     </div>
                     <div class="form-group">
                     <%= label_tag 'Adresse' %>
-                    <%= text_area_tag 'adress', @building.adress, class: "form-control mb-2" %>
+                    <%= text_field_tag 'adress', @building.adress, class: "form-control mb-2" %>
                     </div>
+                    <div class="form-group">
+                    <%= label_tag 'Ville' %>
+                    <%= text_field_tag 'city', @building.city, class: "form-control mb-2" %>
+                    </div>
+                    <div class="form-group">
+                    <%= label_tag 'Code_postal' %>
+                    <%= text_field_tag 'zip_code', @building.zip_code, class: "form-control mb-2" %>
+                    </div>                    
                     <div class="form-group">
                     <%= label_tag 'Référence' %>
                     <%= text_field_tag 'reference', @building.reference, class: "form-control mb-2" %>
                     </div>
                     <br />
+                    <div class="form-group">
+                    <p>Photo de la facade de l'immeuble :</p>
                     <%= file_field_tag :avatar, class: "form-control btn" %>
-                    <br />                    <br />                    <br />
+                    <br />                    <br />                    
+                    </div>
                     <%= submit_tag "Terminer", class: "form-control btn bt-theme" %>
                     <% end %>
                   </div>
