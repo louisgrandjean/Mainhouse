@@ -18,15 +18,15 @@ end
 
 
 5.times do |i|
-  Building.create(name: "Building 1", agency_id: i, adress: "01 rue de la République", reference: Faker::Number.hexadecimal(digits: 6), picture: "https://www.fibra-award.org/wp-content/uploads/2018/11/31-Rue-Myrha-825x510.jpg")
-  Building.create(name: "Building 2", agency_id: i, adress: "02 rue de la République", reference: Faker::Number.hexadecimal(digits: 6), picture: "https://www.fournisseur-energie.com/blog/wp-content/uploads/2020/05/ravalement-fa%C3%A7ade-immeuble-825x510.jpg")
-  Building.create(name: "Building 3", agency_id: i, adress: "03 rue de la République", reference: Faker::Number.hexadecimal(digits: 6), picture: "https://fr-architectes.com/wp-content/uploads/2020/03/P-01-vaucanson-825x510.jpg")
-  Building.create(name: "Building 4", agency_id: i, adress: "04 rue de la République", reference: Faker::Number.hexadecimal(digits: 6), picture: "https://fr-architectes.com/wp-content/uploads/2015/05/IMG_6604-825x510.jpg")
-  Building.create(name: "Building 5", agency_id: i, adress: "05 rue de la République", reference: Faker::Number.hexadecimal(digits: 6), picture: "https://www.fibra-award.org/wp-content/uploads/2019/09/C11_North-by-Northwest_P10200702-825x510.jpg")
-  Building.create(name: "Building 6", agency_id: i, adress: "06 rue de la République", reference: Faker::Number.hexadecimal(digits: 6), picture: "http://www.tla-architectes.com/wp-content/uploads/2020/08/nouvelle_archietcture_Aqublu-825x510.jpg")
-  Building.create(name: "Building 7", agency_id: i, adress: "07 rue de la République", reference: Faker::Number.hexadecimal(digits: 6), picture: "https://cdn.shortpixel.ai/client/q_glossy,ret_img/https://simulateur-pret-hypothecaire.be/wp-content/uploads/2019/01/flensburg-2380551_960_720-825x510.jpg")
-  Building.create(name: "Building 8", agency_id: i, adress: "08 rue de la République", reference: Faker::Number.hexadecimal(digits: 6), picture: "https://www.fibra-award.org/wp-content/uploads/2018/11/07-Nantes-f6_LAD_illustration-parti-pris_2_small-825x510.jpg")
-  Building.create(name: "Building 9", agency_id: i, adress: "09 rue de la République", reference: Faker::Number.hexadecimal(digits: 6), picture: "http://www.tla-architectes.com/wp-content/uploads/2020/03/projet_Teasdale-06-1-825x510.jpg")
+  Building.create(name: "Building 1", agency_id: i, adress: "39 rue de du Maréchal", reference: Faker::Number.hexadecimal(digits: 6), picture: "https://www.fibra-award.org/wp-content/uploads/2018/11/31-Rue-Myrha-825x510.jpg", city: "Lyon", zip_code: "69002")
+  Building.create(name: "Building 2", agency_id: i, adress: "02 rue de la République", reference: Faker::Number.hexadecimal(digits: 6), picture: "https://www.fournisseur-energie.com/blog/wp-content/uploads/2020/05/ravalement-fa%C3%A7ade-immeuble-825x510.jpg", city: "Lyon", zip_code: "69001")
+  Building.create(name: "Building 3", agency_id: i, adress: "16 avenue de la Pie", reference: Faker::Number.hexadecimal(digits: 6), picture: "https://fr-architectes.com/wp-content/uploads/2020/03/P-01-vaucanson-825x510.jpg", city: "Lyon", zip_code: "69003")
+  Building.create(name: "Building 4", agency_id: i, adress: "67 rue de la Vieille", reference: Faker::Number.hexadecimal(digits: 6), picture: "https://fr-architectes.com/wp-content/uploads/2015/05/IMG_6604-825x510.jpg", city: "Lyon", zip_code: "69002")
+  Building.create(name: "Building 5", agency_id: i, adress: "05 rue Orange", reference: Faker::Number.hexadecimal(digits: 6), picture: "https://www.fibra-award.org/wp-content/uploads/2019/09/C11_North-by-Northwest_P10200702-825x510.jpg", city: "Lyon", zip_code: "69006")
+  Building.create(name: "Building 6", agency_id: i, adress: "06 chemin de l'Arbre Moche", reference: Faker::Number.hexadecimal(digits: 6), picture: "http://www.tla-architectes.com/wp-content/uploads/2020/08/nouvelle_archietcture_Aqublu-825x510.jpg", city: "Lyon", zip_code: "69005")
+  Building.create(name: "Building 7", agency_id: i, adress: "98 rue de la Marmotte", reference: Faker::Number.hexadecimal(digits: 6), picture: "https://cdn.shortpixel.ai/client/q_glossy,ret_img/https://simulateur-pret-hypothecaire.be/wp-content/uploads/2019/01/flensburg-2380551_960_720-825x510.jpg", city: "Lyon", zip_code: "69008")
+  Building.create(name: "Building 8", agency_id: i, adress: "17 avenue Leclerc", reference: Faker::Number.hexadecimal(digits: 6), picture: "https://www.fibra-award.org/wp-content/uploads/2018/11/07-Nantes-f6_LAD_illustration-parti-pris_2_small-825x510.jpg", city: "Lyon", zip_code: "69007")
+  Building.create(name: "Building 9", agency_id: i, adress: "09 impasse du Soleil Bleu", reference: Faker::Number.hexadecimal(digits: 6), picture: "http://www.tla-architectes.com/wp-content/uploads/2020/03/projet_Teasdale-06-1-825x510.jpg", city: "Lyon", zip_code: "69005")
 end
 
 3.times do |i|
