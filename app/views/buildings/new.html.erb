@@ -19,6 +19,14 @@
                     <%= text_field_tag 'adress', @building.adress, class: "form-control mb-2" %>
                     </div>
                     <div class="form-group">
+                    <%= label_tag 'Ville' %>
+                    <%= text_field_tag 'city', @building.city, class: "form-control mb-2" %>
+                    </div>
+                    <div class="form-group">
+                    <%= label_tag 'Code_postal' %>
+                    <%= text_field_tag 'zip_code', @building.zip_code, class: "form-control mb-2" %>
+                    </div>                    
+                    <div class="form-group">
                     <%= label_tag 'Référence' %>
                     <%= text_field_tag 'reference', @building.reference, class: "form-control mb-2" %>
                     </div>

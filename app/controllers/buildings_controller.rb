@@ -69,6 +69,6 @@ class BuildingsController < ApplicationController
 
     private
     def building_params
-      params.permit(:agency_id, :name, :adress, :reference, :picture, :avatar)
+      params.permit(:agency_id, :name, :adress, :reference, :picture, :avatar, :zip_code, :city)
     end
 end

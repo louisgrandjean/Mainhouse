@@ -23,7 +23,8 @@
             </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item"><%= building.adress%></li>
-              <li class="list-group-item">Id de l'immeuble : <%= building.id %></li> 
+              <li class="list-group-item">Référence : <%= building.reference %></li> 
+
             </ul>
               <div class="card-body">
                 <%= link_to "Afficher cet immeuble",  agency_building_path(params[:agency_id], building.id), method: :get, class:"btn btn-theme2  p-2 shadow rounded-pill"%>

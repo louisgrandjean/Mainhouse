@@ -16,16 +16,16 @@
                       <%= text_field_tag 'name', @agency.name, class: "form-control mb-2" %>
 
                       <%= label_tag 'Ville' %>
-                      <%= text_area_tag 'city', @agency.city, class: "form-control mb-2" %>
+                      <%= text_field_tag 'city', @agency.city, class: "form-control mb-2" %>
 
                       <%= label_tag 'Adresse' %>
-                      <%= text_area_tag 'adress', @agency.adress, class: "form-control mb-2" %>
+                      <%= text_field_tag 'adress', @agency.adress, class: "form-control mb-2" %>
 
                       <%= label_tag 'Numéro de téléphone' %>
                       <%= text_field_tag 'phone_number', @agency.phone_number, class: "form-control mb-2" %>
 
                       <%= label_tag 'SIREN' %>
-                      <%= text_area_tag 'siren', @agency.siren, class: "form-control mb-2" %>                    
+                      <%= text_field_tag 'siren', @agency.siren, class: "form-control mb-2" %>                    
                       <br />
                       <%= submit_tag "Editer vos informations", class: "btn login-form__btn submit w-100" %>
 
